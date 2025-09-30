@@ -26,14 +26,16 @@ h1, h2, h3, h4 {
 }
 /* Section À propos dans la sidebar */
 .sidebar .about {
-  background: transparent;  /* pas de fond blanc */
-  color: with;             /* texte blanc */
-  padding: 0;               /* réduire le padding pour coller au reste */
+  background: #f9fbff;  /* fond bleu clair */
+  color: white;          /* texte en blanc */
+  padding: 0;            /* réduire le padding */
 }
 
 .sidebar .about code {
-  background: rgba(255,255,255,0.2); /* légèrement visible sur bleu */
+  background: rgba(255, 255, 255, 0.2); /* légèrement visible sur bleu */
   color: white;
+  padding: 2px 4px;      /* petit padding pour plus de lisibilité */
+  border-radius: 3px;    /* coins légèrement arrondis */
 }
 
 
