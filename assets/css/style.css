@@ -1,0 +1,16 @@
+body {
+  background-color: #f9fbff; /* fond bleu très clair */
+  color: #1a1a1a; /* texte noir */
+}
+
+a {
+  color: #0066cc; /* liens bleus */
+}
+
+a:hover {
+  color: #004080; /* bleu foncé au survol */
+}
+
+h1, h2, h3, h4 {
+  color: #003366; /* titres en bleu foncé */
+}
