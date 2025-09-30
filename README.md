@@ -5,8 +5,8 @@
 ## À propos
 **Data Analyst | Business Intelligence | Big Data**  
  
-Je suis étudiant en **Master Big Data, Analyse et Business Intelligence** à l’Université Sorbonne Paris Nord.  
-Avec une formation en **économie statistique** et des expériences en **logistique pharmaceutique** et **marketing digital**,  
+Je suis étudiant en **Master 2 Big Data, Analyse et Business Intelligence** à l’Université Sorbonne Paris Nord.  
+Avec une formation de base en **économie statistique** et des expériences en **logistique pharmaceutique** et **marketing digital et acquision aommercial**,  
 je développe des solutions analytiques concrètes, des dashboards interactifs et des automatisations pour aider à la prise de décision.  
 
 #### Passionné par la donnée, j’aide les entreprises à transformer leurs informations en décisions stratégiques. 
