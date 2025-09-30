@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
 
 .sidebar .about code {
   background: rgba(255, 255, 255, 0.2); /* légèrement visible sur bleu */
-  color: white;
+  color: red;
   padding: 2px 4px;      /* petit padding pour plus de lisibilité */
   border-radius: 3px;    /* coins légèrement arrondis */
 }
