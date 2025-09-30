@@ -3,11 +3,8 @@ body {
   background-color: #f9fbff;
   color: #1a1a1a;
   font-family: Calibri, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
   margin: 0;
 }
 
@@ -28,23 +25,22 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5em;
 }
 
-/* ===== Sidebar ===== */
+/* ===== Sidebar figée ===== */
 .sidebar {
-  width: 30%;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   background: #003366;
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  position: fixed;        /* sidebar figée */
-  top: 0;
-  left: 0;
-  height: 100vh;          /* prend toute la hauteur */
-  overflow-y: auto;       /* scroll si contenu dépasse */
-  flex-shrink: 0;
+  overflow-y: auto;
 }
 
 .sidebar img {
-  width: 180px;           /* photo plus grande */
+  width: 180px;
   height: 180px;
   border-radius: 50%;
   display: block;
@@ -60,7 +56,6 @@ h1, h2, h3, h4 {
   margin: 10px 0;
 }
 
-/* Boutons */
 a.button {
   display: block;
   margin: 10px 0;
@@ -79,8 +74,7 @@ a.button:hover {
 
 /* ===== Colonne principale ===== */
 .main {
-  width: 70%;
-  margin-left: 30%;       /* pour laisser la place à la sidebar figée */
+  margin-left: 30%; /* important pour ne pas chevaucher la sidebar */
   padding: 40px;
   box-sizing: border-box;
 }
@@ -131,12 +125,9 @@ em {
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  body {
-    flex-direction: column;
-  }
   .sidebar, .main {
     width: 100%;
-    position: static;  /* sidebar ne reste plus figée */
+    position: static;
     margin-left: 0;
   }
 }
