@@ -1,22 +1,20 @@
-# 👋 Ange-Paul THE — Portfolio
+# Ange-Paul THE — Portfolio
 
 ---
 
-## 🏠 Accueil
+## À propos
 **Data Analyst | Business Intelligence | Big Data**  
-Passionné par la donnée, j’aide les entreprises à transformer leurs informations en décisions stratégiques.  
-
-[📂 Voir mes projets](#-projets-data) [📄 Télécharger mon CV](./CV_AngePaulTHE.pdf)
-
----
-
-## 👤 À propos
+ 
 Je suis étudiant en **Master Big Data, Analyse et Business Intelligence** à l’Université Sorbonne Paris Nord.  
 Avec une formation en **économie statistique** et des expériences en **logistique pharmaceutique** et **marketing digital**,  
 je développe des solutions analytiques concrètes, des dashboards interactifs et des automatisations pour aider à la prise de décision.  
 
+#### Passionné par la donnée, j’aide les entreprises à transformer leurs informations en décisions stratégiques. 
+
 **Compétences clés :**  
 `Python` • `SQL` • `Power BI` • `Tableau` • `R` • `Machine Learning`
+
+[📂 Voir mes projets](#-projets-data) [📄 Télécharger mon CV](./CV_AngePaulTHE.pdf)
 
 ---
 
