@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
   left: 0;
   height: 100vh;
   background: #003366;
-  color: white;
+  color: black;
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
