@@ -17,7 +17,7 @@
 
     /* Colonne gauche */
     .sidebar {
-      width: 30%;
+      width: 20%;
       background: #003366;
       color: white;
       padding: 20px;
@@ -52,18 +52,31 @@
 
     /* Colonne droite */
     .main {
-      width: 70%;
+      width: 80%;
       padding: 40px;
     }
     .main h1, .main h2 {
       color: #003366;
     }
-    .project, .experience, .certif {
+    .section {
       margin-bottom: 30px;
       padding: 15px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .skills {
+      margin: 10px 0;
+    }
+    .skills code {
+      background: #f0f0f0;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+    .contact a {
+      color: #003366;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -74,7 +87,7 @@
     <h2>Ange-Paul THE</h2>
     <p><strong>Data Analyst</strong><br>Big Data & BI</p>
 
-    <a href="CV_AngePaulTHE.pdf" class="button">📄 Télécharger mon CV</a>
+    <a href="./CV_AngePaulTHE.pdf" class="button">📄 Télécharger mon CV</a>
     <a href="https://github.com/ryusaki13" class="button">📂 Mes Projets</a>
 
     <h3>Contact</h3>
@@ -87,43 +100,79 @@
   <div class="main">
     <h1>Portfolio</h1>
 
-    <section class="experience">
-      <h2>💼 Expériences Professionnelles</h2>
-      <h3>Nouvelle Pharmacie de la Santé Publique de Côte d’Ivoire (NPSP-CI)</h3>
-      <p>Stagiaire Data Analyst — 11/2022 à 08/2023</p>
-      <ul>
-        <li>Analyse et modélisation de données</li>
-        <li>Suivi des indicateurs clés</li>
-        <li>Automatisation des processus achat</li>
-      </ul>
-
-      <h3>Aliive, pour une alimentation positive</h3>
-      <p>Stagiaire Data Analyst — 06/2025 à 08/2025</p>
-      <ul>
-        <li>Analyse des performances marketing (Google Ads, Meta)</li>
-        <li>Stratégie d’influence et SEO</li>
-        <li>Automatisation des reporting (4j → 2j)</li>
-      </ul>
+    <!-- À propos -->
+    <section class="section about">
+      <h2>👋 À propos</h2>
+      <p><strong>Data Analyst | Business Intelligence | Big Data</strong></p>
+      <p>Je suis étudiant en <strong>Master 2 Big Data, Analyse et Business Intelligence</strong> à l’Université Sorbonne Paris Nord.  
+      Avec une formation de base en <strong>économie statistique</strong> et des expériences en <strong>logistique pharmaceutique</strong> et <strong>marketing digital et acquisition commerciale</strong>, je développe des solutions analytiques concrètes, des dashboards interactifs et des automatisations pour aider à la prise de décision.</p>
+      <p><em>Passionné par la donnée, j’aide les entreprises à transformer leurs informations en décisions stratégiques.</em></p>
+      <div class="skills">
+        <strong>Compétences clés :</strong><br>
+        <code>Python</code> <code>SQL</code> <code>Power BI</code> <code>Tableau</code> <code>R</code> <code>Machine Learning</code>
+      </div>
+      <p>
+        <a href="#projects" class="button">📂 Voir mes projets</a> 
+        <a href="./CV_AngePaulTHE.pdf" class="button">📄 Télécharger mon CV</a>
+      </p>
     </section>
 
-    <section class="project">
+    <!-- Expériences -->
+    <section class="section experience">
+      <h2>💼 Expériences Professionnelles</h2>
+      <h3>🏥 Nouvelle Pharmacie de la Santé Publique de Côte d’Ivoire (NPSP-CI)</h3>
+      <p><strong>Stagiaire Data Analyst — 11/2022 à 08/2023 — Abidjan, Côte d’Ivoire</strong></p>
+      <ul>
+        <li>Extraction, modélisation et analyse de données.</li>
+        <li>Suivi d’indicateurs clés (prix, stock, disponibilité, délais).</li>
+        <li>Automatisation et optimisation des processus achat.</li>
+        <li>Conception de dashboards Power BI et rapports stratégiques.</li>
+      </ul>
+      <p><strong>Outils :</strong> SQL, Power BI, Excel</p>
+
+      <h3>🍏 Aliive, pour une alimentation positive</h3>
+      <p><strong>Stagiaire Data Analyst — 06/2025 à 08/2025 — Neuilly-sur-Seine, France</strong></p>
+      <ul>
+        <li>Mise en place et suivi de rapports de performance d’acquisition client (Google Ads, Meta Ads).</li>
+        <li>Analyse des KPI marketing (CPA, CPC, CPV, taux de recrutement).</li>
+        <li>Contribution à la stratégie digitale (campagnes d’influence & SEO).</li>
+        <li>Automatisation de reporting : réduction du temps de 4 jours → 2 jours.</li>
+      </ul>
+      <p><strong>Outils :</strong> Google Ads, Meta, Excel, SQL</p>
+    </section>
+
+    <!-- Projets -->
+    <section class="section project" id="projects">
       <h2>🚀 Projets Data</h2>
       <ul>
-        <li>Optimisation des Opérations (Classic Models – SQL & Power BI)</li>
-        <li>Analyse ESG/RSE (R, ACP, régression linéaire)</li>
-        <li>Churn Prediction (Python, Random Forest, Logistic Regression)</li>
-        <li>Arbre de Huffman (Python, NetworkX, Matplotlib)</li>
-        <li>SQL Agent (LangChain + Deepseek-Coder)</li>
+        <li><strong>📊 Optimisation des Opérations (Classic Models – SQL & Power BI)</strong> — Extraction, nettoyage, suivi KPI (ventes, stocks) et recommandations marketing.</li>
+        <li><strong>🌱 Analyse ESG/RSE (R & RStudio)</strong> — ACP + régression linéaire pour analyser la performance environnementale des entreprises.</li>
+        <li><strong>👥 Churn Prediction (Python & Scikit-learn)</strong> — Étude du déséquilibre des classes, modèles logistique et Random Forest, recommandations.</li>
+        <li><strong>🧩 Arbre de Huffman (Python, NetworkX, Matplotlib)</strong> — Implémentation et visualisation pour compression de texte.</li>
+        <li><strong>🤖 SQL Agent (LangChain + Deepseek-Coder)</strong> — Agent IA transformant des questions en langage naturel en requêtes SQL exécutables.</li>
       </ul>
     </section>
 
-    <section class="certif">
+    <!-- Certifications -->
+    <section class="section certif">
       <h2>🎓 Certifications</h2>
       <ul>
-        <li>Microsoft PL-300 — Power BI Data Analyst</li>
-        <li>[Autres certifications…]</li>
+        <li>Microsoft PL-300 — <em>Power BI Data Analyst</em></li>
+        <li>[Autres à compléter…]</li>
       </ul>
     </section>
+
+    <!-- Contact -->
+    <section class="section contact">
+      <h2>📬 Contact</h2>
+      <ul>
+        <li>📂 <a href="https://github.com/ryusaki13">GitHub</a></li>
+        <li>💼 <a href="https://linkedin.com/in/ange-paul-emmanuel-the-03a7431b4">LinkedIn</a></li>
+        <li>✉️ <a href="mailto:theange357@gmail.com">Email</a></li>
+      </ul>
+    </section>
+
+    <p><em>✨ “Turning raw data into actionable insights.”</em></p>
   </div>
 </body>
 </html>
