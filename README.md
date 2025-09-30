@@ -2,10 +2,12 @@
 
 ## 👤 Présentation
 Je m’appelle **Ange-Paul THE**, étudiant en Master Big Data, Analyse et Business Intelligence à l’Université Sorbonne Paris Nord.  
-Passionné par l’analyse de données, l’informatique décisionnelle et la data visualisation, je combine une solide formation académique en **économie-statistique** et une expérience pratique en **logistique pharmaceutique**.  
+Passionné par l’analyse de données, l’informatique décisionnelle et la data visualisation, 
+je combine une solide formation académique en **économie-statistique** et une expérience pratique en **logistique pharmaceutique**.  
 Mon objectif est de transformer des données brutes en insights exploitables afin d’accompagner les entreprises dans leurs décisions stratégiques.  
 
-Je suis actuellement à la recherche d’un **stage de 3 à 6 mois en Data Analysis ou Business Analysis** pour mettre en pratique mes compétences techniques et contribuer activement à des projets à fort impact.
+Je suis actuellement à la recherche d’un **stage de 3 à 6 mois en Data Analysis ou Business Analysis** 
+pour mettre en pratique mes compétences techniques et contribuer activement à des projets à fort impact.
 
 ---
 
