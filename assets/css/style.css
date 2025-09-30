@@ -1,46 +1,51 @@
 /* ===== Style global ===== */
 body { 
-  background-color: #f9fbff; /* fond bleu très clair */
-  color: #1a1a1a;            /* texte noir */
+  background-color: #f9fbff;
+  color: #1a1a1a;
   font-family: Calibri, Arial, sans-serif;
-  font-size: 18px;           /* taille du texte */
-  line-height: 1.5;          /* interligne */
+  font-size: 18px;
+  line-height: 1.5;
   display: flex;
-  flex-direction: row;       /* side-by-side */
+  flex-direction: row;
   min-height: 100vh;
   margin: 0;
 }
 
 /* ===== Liens ===== */
 a {
-  color: #0066cc; /* liens bleus */
+  color: #0066cc;
   text-decoration: none;
 }
 
 a:hover {
-  color: #004080; /* bleu foncé au survol */
+  color: #004080;
 }
 
 /* ===== Titres ===== */
 h1, h2, h3, h4 {
-  color: #003366; /* titres en bleu foncé */
+  color: #003366;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
 /* ===== Sidebar ===== */
 .sidebar {
-  width: 30%;                 /* largeur fixe */
+  width: 30%;
   background: #003366;
   color: white;
   padding: 20px;
   box-sizing: border-box;
-  flex-shrink: 0;             /* ne pas rétrécir */
+  position: fixed;        /* sidebar figée */
+  top: 0;
+  left: 0;
+  height: 100vh;          /* prend toute la hauteur */
+  overflow-y: auto;       /* scroll si contenu dépasse */
+  flex-shrink: 0;
 }
 
 .sidebar img {
-  width: 120px;
-  height: 120px;
+  width: 180px;           /* photo plus grande */
+  height: 180px;
   border-radius: 50%;
   display: block;
   margin: 0 auto 20px;
@@ -74,7 +79,8 @@ a.button:hover {
 
 /* ===== Colonne principale ===== */
 .main {
-  width: 70%;                 /* largeur principale */
+  width: 70%;
+  margin-left: 30%;       /* pour laisser la place à la sidebar figée */
   padding: 40px;
   box-sizing: border-box;
 }
@@ -130,5 +136,7 @@ em {
   }
   .sidebar, .main {
     width: 100%;
+    position: static;  /* sidebar ne reste plus figée */
+    margin-left: 0;
   }
 }
