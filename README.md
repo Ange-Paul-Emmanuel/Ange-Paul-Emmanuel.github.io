@@ -1,7 +1,3 @@
-# Ange-Paul THE — Portfolio
-
----
-
 ## À propos
 **Data Analyst | Business Intelligence | Big Data**  
  
