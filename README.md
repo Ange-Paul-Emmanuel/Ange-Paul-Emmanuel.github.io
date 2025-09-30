@@ -1,7 +1,5 @@
-# Bienvenue sur mon Portfolio GitHub
-
 ## 👤 Présentation
-Je m’appelle **Ange-Paul THE**, étudiant en Master Big Data, Analyse et Business Intelligence à l’Université Sorbonne Paris Nord.  
+Bienvenue sur mon Portfolio GitHub, je suis **Ange-Paul THE**, étudiant en Master Big Data, Analyse et Business Intelligence à l’Université Sorbonne Paris Nord.  
 Passionné par l’analyse de données, l’informatique décisionnelle et la data visualisation, 
 je combine une solide formation académique en **économie-statistique** et une expérience pratique en **logistique pharmaceutique**.  
 Mon objectif est de transformer des données brutes en insights exploitables afin d’accompagner les entreprises dans leurs décisions stratégiques.  
