@@ -25,19 +25,19 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5em;
 }
 
-/* Section À propos dans la sidebar */
-.sidebar .about {
-  background-color: #f9fbff !important; /* force la couleur */
+/* Section À propos */
+.section.about {
+  background-color: #f9fbff !important; /* bleu clair */
   color: #333 !important;
   padding: 10px;
   border-radius: 5px;
 }
 
-.sidebar .about code {
-  background: rgba(255, 255, 255, 0.2); /* légèrement visible sur bleu */
-  color: #333;           /* gris foncé pour contraste lisible */
-  padding: 2px 4px;      /* petit padding pour plus de lisibilité */
-  border-radius: 3px;    /* coins légèrement arrondis */
+.section.about code {
+  background: rgba(255, 255, 255, 0.2);
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 
