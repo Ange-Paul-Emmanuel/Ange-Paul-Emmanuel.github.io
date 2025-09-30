@@ -27,7 +27,7 @@ h1, h2, h3, h4 {
 /* Section À propos dans la sidebar */
 .sidebar .about {
   background: transparent;  /* pas de fond blanc */
-  color: black;             /* texte blanc */
+  color: with;             /* texte blanc */
   padding: 0;               /* réduire le padding pour coller au reste */
 }
 
