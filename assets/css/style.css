@@ -6,6 +6,7 @@ body {
   font-size: 18px;           /* taille du texte */
   line-height: 1.5;          /* interligne */
   display: flex;
+  flex-direction: row;       /* side-by-side */
   min-height: 100vh;
   margin: 0;
 }
@@ -29,11 +30,12 @@ h1, h2, h3, h4 {
 
 /* ===== Sidebar ===== */
 .sidebar {
-  width: 25%;
+  width: 30%;                 /* largeur fixe */
   background: #003366;
   color: white;
   padding: 20px;
   box-sizing: border-box;
+  flex-shrink: 0;             /* ne pas rétrécir */
 }
 
 .sidebar img {
@@ -53,7 +55,7 @@ h1, h2, h3, h4 {
   margin: 10px 0;
 }
 
-/* Boutons dans la sidebar ou sections */
+/* Boutons */
 a.button {
   display: block;
   margin: 10px 0;
@@ -72,7 +74,7 @@ a.button:hover {
 
 /* ===== Colonne principale ===== */
 .main {
-  width: 75%;
+  width: 70%;                 /* largeur principale */
   padding: 40px;
   box-sizing: border-box;
 }
@@ -119,4 +121,14 @@ ul li {
 /* Citation ou texte en italique */
 em {
   font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar, .main {
+    width: 100%;
+  }
 }
