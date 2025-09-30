@@ -24,6 +24,18 @@ h1, h2, h3, h4 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
+/* Section À propos dans la sidebar */
+.sidebar .about {
+  background: transparent;  /* pas de fond blanc */
+  color: white;             /* texte blanc */
+  padding: 0;               /* réduire le padding pour coller au reste */
+}
+
+.sidebar .about code {
+  background: rgba(255,255,255,0.2); /* légèrement visible sur bleu */
+  color: white;
+}
+
 
 /* ===== Sidebar figée ===== */
 .sidebar {
