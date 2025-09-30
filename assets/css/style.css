@@ -26,19 +26,20 @@ h1, h2, h3, h4 {
 }
 
 /* Section À propos */
-.section.about {
-  background-color: #f9fbff !important; /* bleu clair */
+.sidebar .about {
+  background-color: #f9fbff !important;
   color: #333 !important;
   padding: 10px;
   border-radius: 5px;
 }
 
-.section.about code {
+.sidebar .about code {
   background: rgba(255, 255, 255, 0.2);
   color: #333;
   padding: 2px 4px;
   border-radius: 3px;
 }
+
 
 
 
