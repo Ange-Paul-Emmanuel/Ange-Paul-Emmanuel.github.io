@@ -1,4 +1,4 @@
-# 👋 Bienvenue sur mon Portfolio GitHub
+# Bienvenue sur mon Portfolio GitHub
 
 ## 👤 Présentation
 Je m’appelle **Ange-Paul THE**, étudiant en Master Big Data, Analyse et Business Intelligence à l’Université Sorbonne Paris Nord.  
@@ -67,16 +67,10 @@ Je suis actuellement à la recherche d’un **stage de 3 à 6 mois en Data Analy
 ---
 
 ## 🌐 Liens & Contact
-- [📂 GitHub](https://github.com/ryusaki13)  
+- [📂 GitHub](https://github.com/Ange-Paul-Emmanuel)  
 - [💼 LinkedIn](https://linkedin.com/in/ange-paul-emmanuel-the-03a7431b4)  
 - [✉️ Email](mailto:theange357@gmail.com) • 📱 +33 07 44 24 38 00  
 
 ---
-✨ *“Turning raw data into actionable insights.”*  
-
-- [📂 Mon GitHub](https://github.com/ryusaki13)  
-- [✉️ Contact email](mailto:theangepaul@gmail.com)  
-
----
-✨ *“Turning raw data into actionable insights.”*  
+✨ *“Turning raw data into actionable insights.”*   
 
