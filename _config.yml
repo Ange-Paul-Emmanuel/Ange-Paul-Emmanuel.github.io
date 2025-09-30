@@ -1,0 +1,23 @@
+title: "Portfolio Ange-Paul THE"
+description: "Data Analyst | Business Intelligence | Machine Learning"
+author: "Ange-Paul THE"
+email: "theange357@gmail.com"
+theme: jekyll-theme-minimal
+
+# Liens sociaux (affichés en bas si activés)
+social_links:
+  github: https://github.com/Ange-Paul-Emmanuel
+  linkedin: ange-paul-emmanuel-the-03a7431b4
+  email: theange357@gmail.com
+
+# Couleur personnalisée via un fichier CSS
+plugins:
+  - jekyll-seo-tag
+
+# Inclure un CSS custom pour la couleur bleue
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      css: "assets/css/style.css"
