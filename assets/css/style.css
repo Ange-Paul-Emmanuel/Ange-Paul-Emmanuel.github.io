@@ -1,19 +1,122 @@
-body {
+/* ===== Style global ===== */
+body { 
   background-color: #f9fbff; /* fond bleu très clair */
-  color: #1a1a1a; /* texte noir */
+  color: #1a1a1a;            /* texte noir */
   font-family: Calibri, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 18px;           /* taille du texte */
+  line-height: 1.5;          /* interligne */
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
 }
 
+/* ===== Liens ===== */
 a {
   color: #0066cc; /* liens bleus */
+  text-decoration: none;
 }
 
 a:hover {
   color: #004080; /* bleu foncé au survol */
 }
 
+/* ===== Titres ===== */
 h1, h2, h3, h4 {
   color: #003366; /* titres en bleu foncé */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 30%;
+  background: #003366;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sidebar p, .sidebar h3 {
+  margin: 10px 0;
+}
+
+/* Boutons dans la sidebar ou sections */
+a.button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  background: #0066cc;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+a.button:hover {
+  background: #004080;
+}
+
+/* ===== Colonne principale ===== */
+.main {
+  width: 75%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Sections avec encadrés */
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Compétences */
+.skills {
+  margin: 10px 0;
+}
+
+.skills code {
+  background: #f0f0f0;
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/* Listes */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Contact */
+.contact a {
+  color: #003366;
+}
+
+.contact li {
+  margin-bottom: 5px;
+}
+
+/* Citation ou texte en italique */
+em {
+  font-style: italic;
 }
