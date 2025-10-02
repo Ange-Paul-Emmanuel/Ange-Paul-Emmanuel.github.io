@@ -1,4 +1,7 @@
 /* ===== Style global ===== */
+html {
+    scroll-behavior: smooth; /* AMÉLIORATION : Défilement doux */
+}
 body { 
     background-color: #f9fbff;
     color: #1a1a1a;
@@ -25,10 +28,6 @@ h1, h2, h3, h4 {
     color: #003366;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* ===== Sidebar figée (Desktop) ===== */
@@ -90,57 +89,58 @@ a.button:hover {
     background: #004080;
 }
 
+/* Style des NOUVEAUX TITRES de section dans la sidebar (h4) */
+.sidebar h4 {
+    color: white; /* Titre en blanc sur le fond bleu foncé de la sidebar */
+    margin-top: 25px; 
+    margin-bottom: 0; /* Espace réduit entre le titre et la boîte */
+    padding-left: 5px; 
+    font-size: 1.1em; 
+}
+
+
 /* ************************************** */
-/* MODIFICATION : SECTION À PROPOS ET COMPÉTENCES (Fond Unifié, Texte Blanc) */
+/* MODIFICATION : SECTION À PROPOS ET COMPÉTENCES (Fond Unifié, Texte Blanc, Contraste) */
 /* ************************************** */
-/* MODIFICATION: Boîtes bleues avec un contraste clair */
 .sidebar .about,
 .sidebar .skills-tech-container,
 .sidebar .skills-tools-container {
-    background-color: #0066cc; /* Fond bleu primaire */
-    color: white; /* Texte blanc */
+    background-color: #0066cc; /* Fond bleu primaire (boutons) */
+    color: white; /* Texte par défaut en BLANC */
     padding: 15px;
     border-radius: 6px;
     
-    /* NOUVEAU CONTRASTE VISUEL */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure blanche subtile */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre portée sombre pour 'flotter' */
+    /* AMÉLIORATION : Contraste visuel pour se détacher du fond bleu foncé */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
     
     margin-top: 5px; /* Petit espace sous le titre h4 */
-    margin-bottom: 20px; /* Espace sous la boîte */
+    margin-bottom: 20px; 
 }
 
-/* Règle h4 ajustée pour laisser un petit espace */
-.sidebar h4 {
+/* Assure que le texte en gras dans ces blocs est blanc */
+.sidebar .about p strong,
+.skills-tech-list li strong {
     color: white; 
-    margin-top: 25px; 
-    margin-bottom: 0; /* Retire l'espace après le titre */
-    padding-left: 5px;
-    font-size: 1.1em;
+    font-weight: bold;
 }
-
-/* S'assurer que les titres et le gras dans ces blocs sont blancs */
-.sidebar .about h3,
-.sidebar .about strong,
-.sidebar .skills-tech-container strong,
-.sidebar .skills-tools-container strong,
-.sidebar .about p strong { /* Ajout pour le gras de la section "À propos" */
-    color: white; 
+.sidebar .about p {
+    margin-top: 0; 
 }
-
 
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
-    display: flex; /* Active Flexbox pour aligner les badges */
-    flex-wrap: wrap; /* Permet aux badges de passer à la ligne */
+    display: flex; 
+    flex-wrap: wrap; 
     gap: 8px;
-    margin-top: 10px; /* Ajoute un espace entre le haut de la boîte et les badges */
+    margin-top: 10px; 
+    line-height: 2.2; /* AMÉLIORATION : Espace entre les rangées de badges */
 }
 
 .skill-tag {
     display: inline-block;
-    background: white; /* Fond blanc pur pour le contraste maximal sur le bleu uni */
-    color: #003366; /* Texte bleu foncé, très lisible */
+    background: white; 
+    color: #003366; 
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -149,7 +149,7 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* NOUVEAU STYLE : Liste Compétences Techniques */
+/* NOUVEAU STYLE : Liste Compétences Techniques (Tirets) */
 /* ************************************** */
 .skills-tech-list {
     list-style-type: none; 
@@ -158,19 +158,16 @@ a.button:hover {
 }
 
 .skills-tech-list li {
-    color: white; /* Assure la couleur BLANCHE du texte */
+    color: white; 
     margin-bottom: 5px;
-    padding-left: 15px;
-    position: relative;
-}
-.skills-tech-list li strong {
-    color: white; /* Maintient le gras en BLANC */
+    padding-left: 15px; 
+    position: relative; 
 }
 
 /* Crée le tiret personnalisé */
 .skills-tech-list li::before {
     content: "—";
-    color: white; /* CORRECTION: Couleur du tiret en BLANC */
+    color: white; 
     position: absolute;
     left: 0; 
     font-weight: bold;
@@ -190,24 +187,11 @@ a.button:hover {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    
+    /* AMÉLIORATION : Bandeau gauche pour mieux séparer les sections */
+    border-left: 5px solid #0066cc; 
 }
 
-/* Style des NOUVEAUX TITRES de section dans la sidebar (h4) */
-.sidebar h4 {
-    color: white; /* Titre en blanc sur le fond bleu foncé de la sidebar */
-    margin-top: 25px; 
-    margin-bottom: 5px; 
-    padding-left: 5px; 
-    font-size: 1.1em; 
-}
-
-/* Règle d'espacement pour aligner les boîtes sous les h4 */
-.sidebar .about,
-.sidebar .skills-tech-container,
-.sidebar .skills-tools-container {
-    margin-top: 0; /* Aligné avec le h4 au-dessus */
-    margin-bottom: 20px;
-}
 
 /* ************************************** */
 /* SECTION PROJETS (Améliorée) */
@@ -281,18 +265,21 @@ a.button:hover {
     .sidebar .skills-tools-container {
         background-color: white; 
         color: #1a1a1a;
+        /* Règle de bordure et d'ombre retirée sur mobile pour un look plus plat */
+        border: 1px solid #e0e0e0; 
+        box-shadow: none;
     }
 
     /* S'assurer que le texte et les titres sont sombres sur fond blanc sur mobile */
     .sidebar h4 {
-        color: #003366; /* Les titres h4 passent au bleu foncé */
+        color: #003366;
     }
     .sidebar .about p strong,
     .skills-tech-list li strong {
-        color: #1a1a1a; /* Le texte des sections passe au noir/gris foncé */
+        color: #1a1a1a; 
     }
     .skills-tech-list li::before {
-        color: #1a1a1a; /* Le tiret passe au noir/gris foncé */
+        color: #1a1a1a; 
     }
 
     .sidebar h2, .sidebar h3 {
