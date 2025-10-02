@@ -1,151 +1,252 @@
 /* ===== Style global ===== */
 body { 
-  background-color: #f9fbff;
-  color: #1a1a1a;
-  font-family: Calibri, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+    background-color: #f9fbff;
+    color: #1a1a1a;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* ===== Liens ===== */
 a {
-  color: #0066cc;
-  text-decoration: none;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s; /* Transition pour un effet plus doux */
 }
 
 a:hover {
-  color: #004080;
+    color: #004080;
+    text-decoration: underline;
 }
 
 /* ===== Titres ===== */
 h1, h2, h3, h4 {
-  color: #003366;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+    color: #003366;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-/* Section À propos */
-.sidebar .about {
-  background-color: #f9fbff !important;
-  color: #333 !important;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.sidebar .about code {
-  background: rgba(255, 255, 255, 0.2);
-  color: #333;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-
-
-
-/* ===== Sidebar figée ===== */
+/* ===== Sidebar figée (Desktop) ===== */
 .sidebar {
-  width: 30%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background: #003366;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #003366; /* Couleur principale */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .sidebar img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white; /* Bordure blanche pour mettre la photo en valeur */
+    display: block;
+    margin: 0 auto 20px;
 }
 
 .sidebar h2 {
-  text-align: center;
-  margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white; /* S'assurer que le titre est blanc sur le fond bleu */
 }
 
 .sidebar p, .sidebar h3 {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
+/* Liens dans la sidebar (email, linkedin) */
+.sidebar a {
+    color: #a0c3e6; /* Bleu clair pour les liens sur fond foncé */
+}
+.sidebar a:hover {
+    color: white;
+}
+
+/* Boutons (CV et Mes Projets) */
 a.button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  text-align: center;
-  background: #0066cc;
-  color: white;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    background: #0066cc;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
 }
 
 a.button:hover {
-  background: #004080;
+    background: #004080;
 }
 
-/* ===== Colonne principale ===== */
-.main {
-  margin-left: 30%; /* important pour ne pas chevaucher la sidebar */
-  padding: 40px;
-  box-sizing: border-box;
+/* Style de la section À Propos dans la Sidebar */
+.sidebar .about {
+    background-color: rgba(255, 255, 255, 0.05); /* Arrière-plan subtil */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
-/* Sections avec encadrés */
-.section {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Compétences */
+/* ===== Compétences (Badges) ===== */
 .skills {
-  margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Espace entre les badges */
+    margin: 15px 0 0;
+}
+.skills strong {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    color: white; /* Assurer la couleur blanche sur fond bleu */
 }
 
-.skills code {
-  background: #f0f0f0;
-  padding: 3px 6px;
-  border-radius: 4px;
-  margin-right: 5px;
+.skill-tag {
+    display: inline-block;
+    background: #4a75a9; /* Couleur de badge contrastante */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* ===== Colonne principale (Contenu) ===== */
+.main {
+    margin-left: 30%; /* Laisse la place pour la sidebar */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Sections avec encadrés (Expériences, Projets, Certifications) */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Listes */
 ul {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 ul li {
-  margin-bottom: 8px;
-}
-
-/* Contact */
-.contact a {
-  color: #003366;
-}
-
-.contact li {
-  margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* Citation ou texte en italique */
 em {
-  font-style: italic;
+    font-style: italic;
+    color: #555;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* ===== Responsive ===== */
+/* ************************************** */
+/* SECTION PROJETS (Améliorée) */
+/* ************************************** */
+
+.project-item {
+    background: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #0066cc; /* Bordure latérale bleue pour l'impact */
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Effet d'élévation au survol */
+    transform: translateY(-2px); /* Léger mouvement */
+}
+
+/* Titres des projets */
+.project-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+/* Lien du titre du projet */
+.project-item h3 a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.project-item h3 a:hover {
+    color: #0066cc;
+}
+
+/* Description du projet */
+.project-item .description {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Technologies utilisées dans le projet */
+.project-item .technologies {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+}
+
+
+/* ************************************** */
+/* RESPONSIVE (Mobile) */
+/* ************************************** */
 @media (max-width: 900px) {
-  .sidebar, .main {
-    width: 100%;
-    position: static;
-    margin-left: 0;
-  }
+    .sidebar, .main {
+        width: 100%;
+        position: static;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* Changement de style de la sidebar en haut de page mobile */
+    .sidebar {
+        background: #f0f0f0; 
+        color: #1a1a1a; /* Texte sombre sur fond clair */
+        border-bottom: 5px solid #0066cc;
+        height: auto;
+    }
+
+    /* S'assurer que les titres restent lisibles */
+    .sidebar h2, .sidebar h3 {
+        color: #003366; 
+    }
+    
+    /* Assurer que la photo de profil est bien centrée sur mobile */
+    .sidebar img {
+        margin: 0 auto 10px;
+    }
+
+    /* Les liens de la sidebar doivent rester bleus sur fond clair */
+    .sidebar a {
+        color: #0066cc;
+    }
+
+    /* Compétences sur mobile (couleurs ajustées pour fond clair) */
+    .skill-tag {
+        background: #e6f0ff; 
+        color: #003366; 
+        border: 1px solid #cce0ff;
+    }
+    .skills strong {
+        color: #1a1a1a;
+    }
 }
