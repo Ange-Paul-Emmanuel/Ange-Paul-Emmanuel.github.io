@@ -183,6 +183,28 @@ a.button:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Style des NOUVEAUX TITRES de section dans la sidebar (h4) */
+.sidebar h4 {
+    color: white; /* Titre en blanc sur le fond bleu foncé de la sidebar */
+    margin-top: 25px; /* Espace au-dessus du titre */
+    margin-bottom: 5px; /* Espace réduit entre le titre et la boîte */
+    padding-left: 5px; /* Léger décalage pour aligner le texte avec les bords de la boîte */
+    font-size: 1.1em; /* Assurez-vous qu'ils soient lisibles, mais pas trop gros */
+}
+
+/* Modifiez cette règle pour réduire le padding des sections (les titres n'y sont plus) */
+.sidebar .about,
+.sidebar .skills-tech-container,
+.sidebar .skills-tools-container {
+    background-color: #0066cc; 
+    color: white; 
+    padding: 15px; /* Un peu moins de padding car le titre est à l'extérieur */
+    border-radius: 5px;
+    margin-top: 0; /* Important : plus d'espace après le titre */
+    margin-bottom: 20px;
+}
+
+
 /* ************************************** */
 /* SECTION PROJETS (Améliorée) */
 /* ************************************** */
