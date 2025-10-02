@@ -136,6 +136,36 @@ a.button:hover {
     white-space: nowrap;
 }
 
+/* ************************************** */
+/* NOUVEAU STYLE : Liste Compétences Techniques */
+/* ************************************** */
+.skills-tech-container {
+    /* ... le reste du style de container (fond, padding) est déjà défini ... */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.skills-tech-list {
+    list-style-type: none; /* Enlève les bullets par défaut */
+    padding-left: 0; /* Enlève le padding par défaut de la liste */
+    margin-top: 10px; /* Ajoute un peu d'espace après le titre */
+}
+
+.skills-tech-list li {
+    color: white; /* Assure la couleur blanche du texte */
+    margin-bottom: 5px;
+    padding-left: 15px; /* Espace pour le tiret personnalisé */
+    position: relative; /* Nécessaire pour positionner le tiret */
+}
+
+/* Crée le tiret personnalisé (un bullet point carré) */
+.skills-tech-list li::before {
+    content: "—"; /* Utilise un tiret demi-cadratin comme bullet point */
+    color: white; /* Couleur du tiret */
+    position: absolute;
+    left: 0; /* Positionne le tiret à gauche */
+    font-weight: bold;
+}
 
 /* ===== Colonne principale (Contenu) ===== */
 .main {
