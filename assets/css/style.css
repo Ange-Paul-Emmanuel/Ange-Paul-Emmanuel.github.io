@@ -87,21 +87,28 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* MODIFICATION : SECTION À PROPOS (Fond Unifié, Texte Blanc) */
+/* MODIFICATION : SECTION À PROPOS ET COMPÉTENCES (Fond Unifié, Texte Blanc) */
 /* ************************************** */
-.sidebar .about {
+/* Applique le style bleu des boutons aux trois sections de la sidebar */
+.sidebar .about,
+.sidebar .skills-tech-container,
+.sidebar .skills-tools-container {
     background-color: #0066cc; /* NOUVEAU FOND : Identique aux boutons */
     color: black; /* Texte par défaut en blanc */
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
+    margin-bottom: 20px; /* Ajoute de l'espace en bas de chaque bloc */
 }
 
+/* S'assurer que les titres et le gras dans ces blocs sont blancs */
 .sidebar .about h3,
-.sidebar .about strong {
-    color: white; /* Force les titres et les gras en blanc */
+.sidebar .about strong,
+.sidebar .skills-tech-container strong,
+.sidebar .skills-tools-container strong {
+    color: white; 
 }
-/* Le texte normal est déjà blanc via .sidebar .about { color: white; } */
+/* ... Le reste des styles de badge et autres restent inchangés ... */
 
 
 /* ===== Compétences (Badges) ===== */
