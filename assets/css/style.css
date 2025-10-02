@@ -91,7 +91,7 @@ a.button:hover {
 /* ************************************** */
 .sidebar .about {
     background-color: #0066cc; /* NOUVEAU FOND : Identique aux boutons */
-    color: white; /* Texte par défaut en blanc */
+    color: black; /* Texte par défaut en blanc */
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
