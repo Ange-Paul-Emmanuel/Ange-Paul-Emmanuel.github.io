@@ -263,6 +263,26 @@ a.button:hover {
     margin-top: 5px;
 }
 
+/* NOUVEAU STYLE : TITRES H2 DÉPLACÉS ET CENTRÉS */
+.main .section-title {
+    text-align: center; /* Centrer le texte */
+    margin-top: 40px;   /* Grand espace avant le titre */
+    margin-bottom: 10px; /* Petit espace entre le titre et la section */
+    font-size: 1.8em;
+    color: #003366;
+    font-weight: 700;
+}
+
+/* Ajuster l'espacement de la section qui suit le titre */
+.main .section {
+    padding-top: 15px; /* Réduit le padding supérieur car le titre est à l'extérieur */
+    margin-bottom: 40px; /* Plus d'espace en bas des sections pour le titre suivant */
+    
+    /* Autres styles de base de la section */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
