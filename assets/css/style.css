@@ -32,7 +32,7 @@ h1, h2, h3, h4 {
 
 /* ===== Sidebar figée (Desktop) ===== */
 .sidebar {
-    width: 40%;
+    width: 30%;
     position: fixed;
     top: 0;
     left: 0;
