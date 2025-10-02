@@ -239,6 +239,13 @@ a.button:hover {
     margin-top: 5px;
 }
 
+/* Style pour les départements en italique */
+.section.experience p em {
+    color: #555; /* Un gris discret */
+    display: block; /* S'assurer qu'il prend sa propre ligne si nécessaire */
+    margin-bottom: 5px; /* Petit espace sous le département */
+}
+
 
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
