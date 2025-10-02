@@ -71,7 +71,7 @@ h1, h2, h3, h4 {
     color: white;
 }
 
-/* Boutons (CV, Mes Projets, Github) - Gardés dans la sidebar */
+/* Boutons (CV, Mes Projets, Github) - Dans la sidebar */
 a.button {
     display: block;
     margin: 10px 0;
@@ -177,25 +177,50 @@ a.button:hover {
     margin-left: 30%;
     padding: 40px;
     box-sizing: border-box;
+    padding-top: 5px; /* Ajustement pour le header sticky */
 }
 
 /* ************************************** */
-/* NOUVEAUTÉ : EN-TÊTE DU CONTENU PRINCIPAL (Portfolio et Boutons) */
+/* NOUVEAUTÉ : EN-TÊTE FIXE (Bienvenue + Boutons) */
 /* ************************************** */
 .header-main {
-    display: flex;
-    justify-content: space-between; /* Pousse le titre à gauche et les boutons à droite */
-    align-items: center; /* Aligne verticalement */
-    padding-bottom: 20px; /* Espace sous l'en-tête */
-    border-bottom: 1px solid #e0e0e0; /* Ligne de séparation sous l'en-tête */
+    /* Propriétés pour Figer l'élément */
+    position: sticky; 
+    top: 0;           
+    z-index: 10;      
+    
+    /* Styles visuels pour l'élément fixe */
+    background-color: #f9fbff; /* Couleur de fond de la page */
+    padding: 15px 0 20px 0;    
+    border-bottom: 1px solid #e0e0e0; 
     margin-bottom: 30px;
+
+    /* Propriétés Flexbox d'alignement */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .header-main h1 {
-    margin: 0; /* Supprime la marge par défaut du h1 */
-    font-size: 2.5em; /* Assure que le titre est bien visible */
+    margin: 0; 
+    font-size: 2.5em; 
     color: #003366;
 }
+
+/* ************************************** */
+/* NOUVEAUTÉ : TITRE ANIMÉ */
+/* ************************************** */
+@keyframes wave {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); } /* Léger déplacement */
+    100% { transform: translateX(0); }
+}
+
+.main .animated-title {
+    animation: wave 2s ease-in-out infinite; /* Application de l'animation */
+    display: inline-block; /* Nécessaire pour l'animation transform */
+}
+
 
 /* Style pour les boutons dans l'en-tête (Inline) */
 .header-buttons a.button-inline {
@@ -218,13 +243,24 @@ a.button:hover {
 
 /* Sections principales (Conteneur) */
 .section {
-    /* La marge-bottom était déjà à 30px, nous l'ajustons pour l'espacement avec les titres H2 */
     margin-bottom: 40px; 
     padding: 20px;
-    padding-top: 15px; /* Réduit le padding supérieur car le titre est à l'extérieur */
+    padding-top: 15px; /* Ajusté car le titre H2 est en dehors */
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ************************************** */
+/* TITRES H2 DÉPLACÉS ET CENTRÉS */
+/* ************************************** */
+.main .section-title {
+    text-align: center; 
+    margin-top: 40px;   
+    margin-bottom: 10px; 
+    font-size: 1.8em;
+    color: #003366;
+    font-weight: 700;
 }
 
 /* ************************************** */
@@ -302,17 +338,6 @@ a.button:hover {
     margin-top: 5px;
 }
 
-/* TITRES H2 DÉPLACÉS ET CENTRÉS */
-.main .section-title {
-    text-align: center; /* Centrer le texte */
-    margin-top: 40px;   /* Grand espace avant le titre */
-    margin-bottom: 10px; /* Petit espace entre le titre et la section */
-    font-size: 1.8em;
-    color: #003366;
-    font-weight: 700;
-}
-
-
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
 /* ************************************** */
@@ -323,13 +348,14 @@ a.button:hover {
         margin-left: 0;
         padding: 20px;
     }
-
-    /* Le header principal doit aussi être fluide sur mobile */
+    
+    /* Header principal (mobile) */
     .header-main {
-        flex-direction: column; /* Empile le titre et les boutons */
-        align-items: flex-start; /* Aligne le tout à gauche */
+        flex-direction: column; 
+        align-items: center; /* Titre et boutons centrés */
         padding-bottom: 10px;
         margin-bottom: 20px;
+        position: sticky; /* Reste sticky sur mobile également */
     }
 
     .header-main h1 {
@@ -337,14 +363,18 @@ a.button:hover {
     }
 
     .header-buttons {
-        width: 100%; /* Permet aux boutons de s'étirer si on veut les mettre en bloc sur mobile */
+        width: 100%; 
+        display: flex; /* Aligne les boutons inline côte à côte sur mobile */
+        justify-content: center;
+        margin-top: 10px;
     }
 
-    /* On s'assure que les boutons du header-main s'affichent correctement */
+    /* Boutons en ligne du header, ajustés pour mobile */
     .header-buttons a.button-inline {
-        display: block; /* Les remet en pleine largeur sur mobile */
-        margin: 5px 0;
-        text-align: center;
+        /* Garder inline-block, mais ajuster la marge pour le centrage */
+        margin: 0 5px; 
+        flex-grow: 1; /* Permet aux boutons de prendre la place équitablement */
+        max-width: 150px;
     }
 
     /* Style de la sidebar en haut de page mobile */
@@ -355,18 +385,17 @@ a.button:hover {
         height: auto;
     }
     
-    /* Les sections bleues redeviennent blanches/claires sur mobile */
+    /* Les sections bleues redeviennent claires sur mobile */
     .sidebar .about,
     .sidebar .skills-tech-container,
     .sidebar .skills-tools-container {
         background-color: white; 
         color: #1a1a1a;
-        /* Règle de bordure et d'ombre retirée sur mobile pour un look plus plat */
         border: 1px solid #e0e0e0; 
         box-shadow: none;
     }
 
-    /* S'assurer que le texte et les titres sont sombres sur fond blanc sur mobile */
+    /* Couleurs de texte pour mobile */
     .sidebar h4 {
         color: #003366; 
     }
@@ -377,15 +406,12 @@ a.button:hover {
     .skills-tech-list li::before {
         color: #1a1a1a; 
     }
-
     .sidebar h2, .sidebar h3 {
         color: #003366; 
     }
-    
     .sidebar img {
         margin: 0 auto 10px;
     }
-
     .sidebar a {
         color: #0066cc;
     }
@@ -397,7 +423,7 @@ a.button:hover {
         border: 1px solid #cce0ff;
     }
     
-    /* Les éléments expérience/projet sur mobile doivent rester discrets sur fond blanc */
+    /* Éléments expérience/projet sur mobile */
     .project-item,
     .experience-item {
         background: white;
