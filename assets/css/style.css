@@ -1,6 +1,6 @@
-/* ===== Style global ===== */
+/* ===== Style global et Améliorations UX ===== */
 html {
-    scroll-behavior: smooth; /* AMÉLIORATION : Défilement doux */
+    scroll-behavior: smooth; /* Défilement doux lors du clic sur les ancres (Mes Projets) */
 }
 body { 
     background-color: #f9fbff;
@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-/* ===== Liens ===== */
+/* ===== Liens (Général) ===== */
 a {
     color: #0066cc;
     text-decoration: none;
@@ -23,7 +23,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== Titres ===== */
+/* ===== Titres (Général) ===== */
 h1, h2, h3, h4 {
     color: #003366;
     margin-top: 0.5em;
@@ -89,36 +89,36 @@ a.button:hover {
     background: #004080;
 }
 
-/* Style des NOUVEAUX TITRES de section dans la sidebar (h4) */
+/* Style des TITRES de section (h4) au-dessus des boîtes */
 .sidebar h4 {
-    color: white; /* Titre en blanc sur le fond bleu foncé de la sidebar */
+    color: white; 
     margin-top: 25px; 
-    margin-bottom: 0; /* Espace réduit entre le titre et la boîte */
+    margin-bottom: 0; 
     padding-left: 5px; 
     font-size: 1.1em; 
 }
 
 
 /* ************************************** */
-/* MODIFICATION : SECTION À PROPOS ET COMPÉTENCES (Fond Unifié, Texte Blanc, Contraste) */
+/* SECTIONS DANS LA SIDEBAR (À Propos, Compétences, Outils) */
 /* ************************************** */
 .sidebar .about,
 .sidebar .skills-tech-container,
 .sidebar .skills-tools-container {
-    background-color: #0066cc; /* Fond bleu primaire (boutons) */
-    color: white; /* Texte par défaut en BLANC */
+    background-color: #0066cc; 
+    color: white; 
     padding: 15px;
     border-radius: 6px;
     
-    /* AMÉLIORATION : Contraste visuel pour se détacher du fond bleu foncé */
+    /* Contraste visuel pour se détacher du fond bleu foncé */
     border: 1px solid rgba(255, 255, 255, 0.2); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
     
-    margin-top: 5px; /* Petit espace sous le titre h4 */
+    margin-top: 5px; 
     margin-bottom: 20px; 
 }
 
-/* Assure que le texte en gras dans ces blocs est blanc */
+/* Assure que le texte et le gras dans ces blocs sont blancs */
 .sidebar .about p strong,
 .skills-tech-list li strong {
     color: white; 
@@ -128,13 +128,14 @@ a.button:hover {
     margin-top: 0; 
 }
 
+
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
     display: flex; 
     flex-wrap: wrap; 
     gap: 8px;
     margin-top: 10px; 
-    line-height: 2.2; /* AMÉLIORATION : Espace entre les rangées de badges */
+    line-height: 2.2; /* Espace entre les rangées de badges */
 }
 
 .skill-tag {
@@ -148,9 +149,7 @@ a.button:hover {
     white-space: nowrap;
 }
 
-/* ************************************** */
-/* NOUVEAU STYLE : Liste Compétences Techniques (Tirets) */
-/* ************************************** */
+/* ===== Liste Compétences Techniques (Tirets) ===== */
 .skills-tech-list {
     list-style-type: none; 
     padding-left: 0; 
@@ -180,37 +179,62 @@ a.button:hover {
     box-sizing: border-box;
 }
 
-/* Sections avec encadrés (Expériences, Projets, Certifications) */
+/* Sections principales (Conteneur) */
 .section {
     margin-bottom: 30px;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    
-    /* AMÉLIORATION : Bandeau gauche pour mieux séparer les sections */
-    border-left: 5px solid #0066cc; 
 }
 
+/* ************************************** */
+/* SECTIONS EXPÉRIENCES ET PROJETS (Boîtes individuelles) */
+/* ************************************** */
 
-/* ************************************** */
-/* SECTION PROJETS (Améliorée) */
-/* ************************************** */
-.project-item {
+.project-item,
+.experience-item { /* NOUVEAU: Applique le même style aux expériences */
     background: #fcfcfc;
     border: 1px solid #e0e0e0;
-    border-left: 5px solid #0066cc; 
+    border-left: 5px solid #0066cc; /* La ligne bleue verticale */
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 5px;
     transition: box-shadow 0.3s, transform 0.2s;
 }
 
-.project-item:hover {
+.project-item:hover,
+.experience-item:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
     transform: translateY(-2px);
 }
 
+/* Style des éléments dans le bloc Expérience */
+.experience-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #003366;
+}
+.experience-item p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.experience-item p em {
+    color: #555; /* Département en italique */
+    display: block; 
+    margin-bottom: 5px; 
+}
+.experience-item ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px; 
+    list-style-type: disc;
+    color: #333;
+}
+
+
+/* Style des éléments dans le bloc Projets */
 .project-item h3 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -239,13 +263,6 @@ a.button:hover {
     margin-top: 5px;
 }
 
-/* Style pour les départements en italique */
-.section.experience p em {
-    color: #555; /* Un gris discret */
-    display: block; /* S'assurer qu'il prend sa propre ligne si nécessaire */
-    margin-bottom: 5px; /* Petit espace sous le département */
-}
-
 
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
@@ -266,7 +283,7 @@ a.button:hover {
         height: auto;
     }
     
-    /* Les sections bleues redeviennent blanches/claires sur mobile pour la lisibilité */
+    /* Les sections bleues redeviennent blanches/claires sur mobile */
     .sidebar .about,
     .sidebar .skills-tech-container,
     .sidebar .skills-tools-container {
@@ -279,7 +296,7 @@ a.button:hover {
 
     /* S'assurer que le texte et les titres sont sombres sur fond blanc sur mobile */
     .sidebar h4 {
-        color: #003366;
+        color: #003366; 
     }
     .sidebar .about p strong,
     .skills-tech-list li strong {
@@ -301,10 +318,17 @@ a.button:hover {
         color: #0066cc;
     }
 
-    /* Compétences (Badges) sur mobile (couleurs ajustées pour fond clair) */
+    /* Compétences (Badges) sur mobile */
     .skill-tag {
         background: #e6f0ff; 
         color: #003366; 
         border: 1px solid #cce0ff;
+    }
+    
+    /* Les éléments expérience/projet sur mobile doivent rester discrets sur fond blanc */
+    .project-item,
+    .experience-item {
+        background: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 }
