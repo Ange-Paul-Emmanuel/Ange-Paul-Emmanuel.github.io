@@ -124,8 +124,11 @@ a.button:hover {
     color: white; 
     font-weight: bold;
 }
+
+/* NOUVEAU : Réduction de la taille du texte "À propos" */
 .sidebar .about p {
     margin-top: 0; 
+    font-size: 13px; 
 }
 
 
@@ -144,7 +147,8 @@ a.button:hover {
     color: #003366; 
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: 0.9em;
+    /* NOUVEAU : Réduction de la taille de police des badges */
+    font-size: 0.85em; 
     font-weight: 600;
     white-space: nowrap;
 }
@@ -156,11 +160,13 @@ a.button:hover {
     margin-top: 10px; 
 }
 
+/* NOUVEAU : Réduction de la taille de la liste des compétences */
 .skills-tech-list li {
     color: white; 
     margin-bottom: 5px;
     padding-left: 15px; 
     position: relative; 
+    font-size: 13px;
 }
 
 /* Crée le tiret personnalisé */
@@ -181,7 +187,7 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* NOUVEAUTÉ : EN-TÊTE FIXE (Bienvenue + Boutons) */
+/* EN-TÊTE FIXE (Bienvenue + Boutons) */
 /* ************************************** */
 .header-main {
     /* Propriétés pour Figer l'élément */
@@ -208,7 +214,7 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* NOUVEAUTÉ : TITRE ANIMÉ */
+/* TITRE ANIMÉ */
 /* ************************************** */
 @keyframes wave {
     0% { transform: translateX(0); }
