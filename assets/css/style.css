@@ -101,11 +101,6 @@ a.button:hover {
 .sidebar .about strong {
     color: white; /* Force les titres et les gras en blanc */
 }
-
-/* Citation en italique */
-.sidebar .about p em {
-    color: #f0f0f0; 
-}
 /* Le texte normal est déjà blanc via .sidebar .about { color: white; } */
 
 
