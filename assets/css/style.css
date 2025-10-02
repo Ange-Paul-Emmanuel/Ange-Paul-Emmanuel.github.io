@@ -29,16 +29,32 @@ h1, h2, h3, h4 {
 
 /* ===== Sidebar figée (Desktop) ===== */
 .sidebar {
-    width: 30%;
-    position: fixed;
+    width: 30%; /* La sidebar prend 30% de la largeur de l'écran */
+    position: fixed; 
     top: 0;
     left: 0;
     height: 100vh;
-    background: #003366; /* Couleur principale (Bleu foncé) */
-    color: white;
-    padding: 20px;
+    padding: 20px; /* Le padding est inclus dans la boîte grâce à box-sizing: border-box */
+    box-sizing: border-box; /* C'est CRUCIAL pour que le padding n'augmente pas le 30% */
+    /* ... autres styles ... */
+}
+
+/* ===== Colonne principale (Contenu) ===== */
+.main {
+    margin-left: 30%; /* Le contenu commence pile après la sidebar */
+    padding: 40px;
     box-sizing: border-box;
-    overflow-y: auto;
+    /* Si vous voulez que la colonne principale prenne le reste de l'espace: */
+    width: 70%; 
+}
+
+/* Règle CRUCIALE que vous aviez dans votre code, assurez-vous qu'elle est là */
+body {
+    box-sizing: border-box; 
+    /* ... autres styles ... */
+}
+*, *::before, *::after {
+    box-sizing: inherit; /* Assure que tout le monde utilise le même modèle de boîte */
 }
 
 .sidebar img {
