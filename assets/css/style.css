@@ -152,7 +152,7 @@ a.button:hover {
 }
 
 .skills-tech-list li {
-    color: white; /* Assure la couleur blanche du texte */
+    color: black; /* Assure la couleur blanche du texte */
     margin-bottom: 5px;
     padding-left: 15px; /* Espace pour le tiret personnalisé */
     position: relative; /* Nécessaire pour positionner le tiret */
@@ -161,7 +161,7 @@ a.button:hover {
 /* Crée le tiret personnalisé (un bullet point carré) */
 .skills-tech-list li::before {
     content: "—"; /* Utilise un tiret demi-cadratin comme bullet point */
-    color: white; /* Couleur du tiret */
+    color: black; /* Couleur du tiret */
     position: absolute;
     left: 0; /* Positionne le tiret à gauche */
     font-weight: bold;
