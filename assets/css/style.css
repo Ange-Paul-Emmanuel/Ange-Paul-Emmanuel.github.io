@@ -12,7 +12,7 @@ body {
 a {
     color: #0066cc;
     text-decoration: none;
-    transition: color 0.3s; /* Transition pour un effet plus doux */
+    transition: color 0.3s;
 }
 
 a:hover {
@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     height: 100vh;
-    background: #003366; /* Couleur principale */
+    background: #003366; /* Couleur principale (Bleu foncé) */
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 4px solid white; /* Bordure blanche pour mettre la photo en valeur */
+    border: 4px solid white;
     display: block;
     margin: 0 auto 20px;
 }
@@ -53,7 +53,7 @@ h1, h2, h3, h4 {
 .sidebar h2 {
     text-align: center;
     margin-bottom: 10px;
-    color: white; /* S'assurer que le titre est blanc sur le fond bleu */
+    color: white; 
 }
 
 .sidebar p, .sidebar h3 {
@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
 
 /* Liens dans la sidebar (email, linkedin) */
 .sidebar a {
-    color: #a0c3e6; /* Bleu clair pour les liens sur fond foncé */
+    color: #a0c3e6;
 }
 .sidebar a:hover {
     color: white;
@@ -86,40 +86,44 @@ a.button:hover {
     background: #004080;
 }
 
-/* Style de la section À Propos dans la Sidebar */
+/* ************************************** */
+/* MODIFICATION : SECTION À PROPOS (Fond Bleu Clair, Texte Blanc) */
+/* ************************************** */
 .sidebar .about {
-    /* Nouveau style : Fond bleu clair et texte blanc */
-    background-color: #337ab7; /* Bleu clair */
-    color: white; /* Texte blanc */
+    background-color: #337ab7; /* Nouveau fond : Bleu clair */
+    color: white; /* Nouveau texte par défaut : Blanc */
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
 }
 
-/* Assurer que les titres dans le bloc "A propos" sont blancs */
-.sidebar .about h3 {
-    color: white;
+.sidebar .about h3,
+.sidebar .about strong {
+    color: white; /* Force les titres et les gras en blanc */
 }
 
+.sidebar .about p em {
+    color: #f0f0f0; /* Force la citation en italique à être lisible */
+}
 
 /* ===== Compétences (Badges) ===== */
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px; /* Espace entre les badges */
+    gap: 8px;
     margin: 15px 0 0;
 }
 .skills strong {
     display: block;
     width: 100%;
     margin-bottom: 5px;
-    color: white; /* Assurer la couleur blanche sur fond bleu */
+    color: white; /* Le titre "Compétences clés" est blanc */
 }
 
 .skill-tag {
     display: inline-block;
-    background: white; /* Changement : Fond blanc */
-    color: #003366; /* Changement : Texte bleu foncé pour un bon contraste */
+    background: white; /* Fond blanc pur pour le contraste */
+    color: #003366; /* Texte bleu foncé, très lisible */
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -130,7 +134,7 @@ a.button:hover {
 
 /* ===== Colonne principale (Contenu) ===== */
 .main {
-    margin-left: 30%; /* Laisse la place pour la sidebar */
+    margin-left: 30%;
     padding: 40px;
     box-sizing: border-box;
 }
@@ -144,16 +148,7 @@ a.button:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Listes */
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-/* Citation ou texte en italique */
+/* Citation principale */
 em {
     font-style: italic;
     color: #555;
@@ -177,18 +172,16 @@ em {
 }
 
 .project-item:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Effet d'élévation au survol */
-    transform: translateY(-2px); /* Léger mouvement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-2px);
 }
 
-/* Titres des projets */
 .project-item h3 {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 1.2em;
 }
 
-/* Lien du titre du projet */
 .project-item h3 a {
     color: #003366;
     text-decoration: underline;
@@ -198,7 +191,6 @@ em {
     color: #0066cc;
 }
 
-/* Description du projet */
 .project-item .description {
     margin-top: 0;
     margin-bottom: 10px;
@@ -206,7 +198,6 @@ em {
     color: #555;
 }
 
-/* Technologies utilisées dans le projet */
 .project-item .technologies {
     font-size: 0.9em;
     color: #888;
@@ -225,27 +216,37 @@ em {
         padding: 20px;
     }
 
-    /* Changement de style de la sidebar en haut de page mobile */
+    /* Style de la sidebar en haut de page mobile */
     .sidebar {
         background: #f0f0f0; 
-        color: #1a1a1a; /* Texte sombre sur fond clair */
+        color: #1a1a1a;
         border-bottom: 5px solid #0066cc;
         height: auto;
     }
 
-    /* S'assurer que les titres restent lisibles */
     .sidebar h2, .sidebar h3 {
         color: #003366; 
     }
     
-    /* Assurer que la photo de profil est bien centrée sur mobile */
     .sidebar img {
         margin: 0 auto 10px;
     }
 
-    /* Les liens de la sidebar doivent rester bleus sur fond clair */
     .sidebar a {
         color: #0066cc;
+    }
+
+    /* Style de la section À Propos sur mobile (retour au fond blanc/clair) */
+    .sidebar .about {
+        background-color: white; 
+        color: #1a1a1a; /* Texte noir sur fond blanc */
+    }
+    .sidebar .about h3,
+    .sidebar .about strong {
+        color: #003366; /* Titres/Gras bleu foncé */
+    }
+    .sidebar .about p em {
+        color: #555; /* Citation grise */
     }
 
     /* Compétences sur mobile (couleurs ajustées pour fond clair) */
