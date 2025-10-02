@@ -71,7 +71,7 @@ h1, h2, h3, h4 {
     color: white;
 }
 
-/* Boutons (CV et Mes Projets) */
+/* Boutons (CV, Mes Projets, Github) - Gardés dans la sidebar */
 a.button {
     display: block;
     margin: 10px 0;
@@ -179,10 +179,49 @@ a.button:hover {
     box-sizing: border-box;
 }
 
+/* ************************************** */
+/* NOUVEAUTÉ : EN-TÊTE DU CONTENU PRINCIPAL (Portfolio et Boutons) */
+/* ************************************** */
+.header-main {
+    display: flex;
+    justify-content: space-between; /* Pousse le titre à gauche et les boutons à droite */
+    align-items: center; /* Aligne verticalement */
+    padding-bottom: 20px; /* Espace sous l'en-tête */
+    border-bottom: 1px solid #e0e0e0; /* Ligne de séparation sous l'en-tête */
+    margin-bottom: 30px;
+}
+
+.header-main h1 {
+    margin: 0; /* Supprime la marge par défaut du h1 */
+    font-size: 2.5em; /* Assure que le titre est bien visible */
+    color: #003366;
+}
+
+/* Style pour les boutons dans l'en-tête (Inline) */
+.header-buttons a.button-inline {
+    display: inline-block; /* Les met côte à côte */
+    padding: 8px 15px;
+    margin-left: 10px; /* Espace entre les boutons */
+    
+    background: #0066cc;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.header-buttons a.button-inline:hover {
+    background: #004080;
+}
+
+
 /* Sections principales (Conteneur) */
 .section {
-    margin-bottom: 30px;
+    /* La marge-bottom était déjà à 30px, nous l'ajustons pour l'espacement avec les titres H2 */
+    margin-bottom: 40px; 
     padding: 20px;
+    padding-top: 15px; /* Réduit le padding supérieur car le titre est à l'extérieur */
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -193,7 +232,7 @@ a.button:hover {
 /* ************************************** */
 
 .project-item,
-.experience-item { /* NOUVEAU: Applique le même style aux expériences */
+.experience-item { 
     background: #fcfcfc;
     border: 1px solid #e0e0e0;
     border-left: 5px solid #0066cc; /* La ligne bleue verticale */
@@ -263,7 +302,7 @@ a.button:hover {
     margin-top: 5px;
 }
 
-/* NOUVEAU STYLE : TITRES H2 DÉPLACÉS ET CENTRÉS */
+/* TITRES H2 DÉPLACÉS ET CENTRÉS */
 .main .section-title {
     text-align: center; /* Centrer le texte */
     margin-top: 40px;   /* Grand espace avant le titre */
@@ -273,16 +312,6 @@ a.button:hover {
     font-weight: 700;
 }
 
-/* Ajuster l'espacement de la section qui suit le titre */
-.main .section {
-    padding-top: 15px; /* Réduit le padding supérieur car le titre est à l'extérieur */
-    margin-bottom: 40px; /* Plus d'espace en bas des sections pour le titre suivant */
-    
-    /* Autres styles de base de la section */
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
@@ -293,6 +322,29 @@ a.button:hover {
         position: static;
         margin-left: 0;
         padding: 20px;
+    }
+
+    /* Le header principal doit aussi être fluide sur mobile */
+    .header-main {
+        flex-direction: column; /* Empile le titre et les boutons */
+        align-items: flex-start; /* Aligne le tout à gauche */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .header-main h1 {
+        margin-bottom: 10px;
+    }
+
+    .header-buttons {
+        width: 100%; /* Permet aux boutons de s'étirer si on veut les mettre en bloc sur mobile */
+    }
+
+    /* On s'assure que les boutons du header-main s'affichent correctement */
+    .header-buttons a.button-inline {
+        display: block; /* Les remet en pleine largeur sur mobile */
+        margin: 5px 0;
+        text-align: center;
     }
 
     /* Style de la sidebar en haut de page mobile */
