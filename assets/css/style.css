@@ -345,6 +345,29 @@ a.button:hover {
 }
 
 /* ************************************** */
+/* STICKER DE VÉRIFICATION D'AUTHENTICITÉ */
+/* ************************************** */
+a.verification-sticker {
+    display: inline-block;
+    background-color: #d4edda; /* Vert très clair */
+    color: #155724; /* Vert foncé pour le texte */
+    border: 1px solid #c3e6cb;
+    padding: 2px 8px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 0.85em; /* Rendre le sticker petit et discret */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+a.verification-sticker:hover {
+    background-color: #c3e6cb;
+    text-decoration: none;
+}
+
+
+/* ************************************** */
 /* RESPONSIVE (Mobile) */
 /* ************************************** */
 @media (max-width: 900px) {
