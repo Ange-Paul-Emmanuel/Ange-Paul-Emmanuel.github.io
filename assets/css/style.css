@@ -29,32 +29,16 @@ h1, h2, h3, h4 {
 
 /* ===== Sidebar figée (Desktop) ===== */
 .sidebar {
-    width: 30%; /* La sidebar prend 30% de la largeur de l'écran */
-    position: fixed; 
+    width: 30%;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    padding: 20px; /* Le padding est inclus dans la boîte grâce à box-sizing: border-box */
-    box-sizing: border-box; /* C'est CRUCIAL pour que le padding n'augmente pas le 30% */
-    /* ... autres styles ... */
-}
-
-/* ===== Colonne principale (Contenu) ===== */
-.main {
-    margin-left: 30%; /* Le contenu commence pile après la sidebar */
-    padding: 40px;
+    background: #003366; /* Couleur principale (Bleu foncé) */
+    color: white;
+    padding: 20px;
     box-sizing: border-box;
-    /* Si vous voulez que la colonne principale prenne le reste de l'espace: */
-    width: 70%; 
-}
-
-/* Règle CRUCIALE que vous aviez dans votre code, assurez-vous qu'elle est là */
-body {
-    box-sizing: border-box; 
-    /* ... autres styles ... */
-}
-*, *::before, *::after {
-    box-sizing: inherit; /* Assure que tout le monde utilise le même modèle de boîte */
+    overflow-y: auto;
 }
 
 .sidebar img {
@@ -90,7 +74,7 @@ a.button {
     margin: 10px 0;
     padding: 10px;
     text-align: center;
-    background: #0066cc;
+    background: #0066cc; /* COULEUR DES BOUTONS */
     color: white;
     border-radius: 6px;
     font-weight: bold;
@@ -103,11 +87,11 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* MODIFICATION : SECTION À PROPOS (Fond Bleu Clair, Texte Blanc) */
+/* MODIFICATION : SECTION À PROPOS (Fond Unifié, Texte Blanc) */
 /* ************************************** */
 .sidebar .about {
-    background-color: #337ab7; /* Nouveau fond : Bleu clair */
-    color: white; /* Nouveau texte par défaut : Blanc */
+    background-color: #0066cc; /* NOUVEAU FOND : Identique aux boutons */
+    color: white; /* Texte par défaut en blanc */
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -118,19 +102,22 @@ a.button:hover {
     color: white; /* Force les titres et les gras en blanc */
 }
 
+/* Citation en italique */
 .sidebar .about p em {
-    color: #f0f0f0; /* Force la citation en italique à être lisible */
+    color: #f0f0f0; 
 }
+/* Le texte normal est déjà blanc via .sidebar .about { color: white; } */
+
 
 /* ===== Compétences (Badges) ===== */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Active Flexbox pour aligner les badges */
+    flex-wrap: wrap; /* Permet aux badges de passer à la ligne */
     gap: 8px;
     margin: 15px 0 0;
 }
 .skills strong {
-    display: block;
+    display: block; /* S'assure que le titre "Compétences clés" est sur une ligne */
     width: 100%;
     margin-bottom: 5px;
     color: white; /* Le titre "Compétences clés" est blanc */
@@ -138,7 +125,7 @@ a.button:hover {
 
 .skill-tag {
     display: inline-block;
-    background: white; /* Fond blanc pur pour le contraste */
+    background: white; /* Fond blanc pur pour le contraste maximal sur le bleu uni */
     color: #003366; /* Texte bleu foncé, très lisible */
     padding: 5px 12px;
     border-radius: 20px;
@@ -180,7 +167,7 @@ em {
 .project-item {
     background: #fcfcfc;
     border: 1px solid #e0e0e0;
-    border-left: 5px solid #0066cc; /* Bordure latérale bleue pour l'impact */
+    border-left: 5px solid #0066cc; 
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 5px;
@@ -240,6 +227,19 @@ em {
         height: auto;
     }
 
+    /* La section A propos sur mobile redevient blanche/claire pour la lisibilité */
+    .sidebar .about {
+        background-color: white; 
+        color: #1a1a1a;
+    }
+    .sidebar .about h3,
+    .sidebar .about strong {
+        color: #003366; 
+    }
+    .sidebar .about p em {
+        color: #555;
+    }
+
     .sidebar h2, .sidebar h3 {
         color: #003366; 
     }
@@ -250,19 +250,6 @@ em {
 
     .sidebar a {
         color: #0066cc;
-    }
-
-    /* Style de la section À Propos sur mobile (retour au fond blanc/clair) */
-    .sidebar .about {
-        background-color: white; 
-        color: #1a1a1a; /* Texte noir sur fond blanc */
-    }
-    .sidebar .about h3,
-    .sidebar .about strong {
-        color: #003366; /* Titres/Gras bleu foncé */
-    }
-    .sidebar .about p em {
-        color: #555; /* Citation grise */
     }
 
     /* Compétences sur mobile (couleurs ajustées pour fond clair) */
