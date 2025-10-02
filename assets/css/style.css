@@ -88,11 +88,19 @@ a.button:hover {
 
 /* Style de la section À Propos dans la Sidebar */
 .sidebar .about {
-    background-color: rgba(255, 255, 255, 0.05); /* Arrière-plan subtil */
+    /* Nouveau style : Fond bleu clair et texte blanc */
+    background-color: #337ab7; /* Bleu clair */
+    color: white; /* Texte blanc */
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
 }
+
+/* Assurer que les titres dans le bloc "A propos" sont blancs */
+.sidebar .about h3 {
+    color: white;
+}
+
 
 /* ===== Compétences (Badges) ===== */
 .skills {
@@ -110,8 +118,8 @@ a.button:hover {
 
 .skill-tag {
     display: inline-block;
-    background: #4a75a9; /* Couleur de badge contrastante */
-    color: white;
+    background: white; /* Changement : Fond blanc */
+    color: #003366; /* Changement : Texte bleu foncé pour un bon contraste */
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.9em;
