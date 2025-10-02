@@ -89,15 +89,30 @@ a.button:hover {
 /* ************************************** */
 /* MODIFICATION : SECTION À PROPOS ET COMPÉTENCES (Fond Unifié, Texte Blanc) */
 /* ************************************** */
-/* Applique le style bleu des boutons aux trois sections de la sidebar */
+/* MODIFICATION: Boîtes bleues avec un contraste clair */
 .sidebar .about,
 .sidebar .skills-tech-container,
 .sidebar .skills-tools-container {
-    background-color: #0066cc; /* NOUVEAU FOND : Identique aux boutons */
-    color: white; /* CORRECTION: Texte par défaut en BLANC */
+    background-color: #0066cc; /* Fond bleu primaire */
+    color: white; /* Texte blanc */
     padding: 15px;
-    border-radius: 5px;
-    /* margin-top: 0; et margin-bottom: 20px; sont gérés par les règles plus bas */
+    border-radius: 6px;
+    
+    /* NOUVEAU CONTRASTE VISUEL */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure blanche subtile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre portée sombre pour 'flotter' */
+    
+    margin-top: 5px; /* Petit espace sous le titre h4 */
+    margin-bottom: 20px; /* Espace sous la boîte */
+}
+
+/* Règle h4 ajustée pour laisser un petit espace */
+.sidebar h4 {
+    color: white; 
+    margin-top: 25px; 
+    margin-bottom: 0; /* Retire l'espace après le titre */
+    padding-left: 5px;
+    font-size: 1.1em;
 }
 
 /* S'assurer que les titres et le gras dans ces blocs sont blancs */
