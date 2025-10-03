@@ -185,6 +185,18 @@ a.button:hover {
     box-sizing: border-box;
     padding-top: 5px; /* Ajustement pour le header sticky */
 }
+/* Style pour les listes de détails à l'intérieur d'un élément de projet */
+.project-item ul.project-details {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333; /* Gris foncé pour une bonne lisibilité */
+}
+
+.project-item ul.project-details li {
+    margin-bottom: 5px;
+}
 
 /* ************************************** */
 /* EN-TÊTE FIXE (Bienvenue + Boutons) */
