@@ -363,25 +363,29 @@ a.button:hover {
     margin-top: 5px;
 }
 /* ************************************** */
-/* STYLE DES IMAGES DE PROJET */
+/* STYLE DES IMAGES DE PROJET (Flottant pour optimiser l'espace) */
 /* ************************************** */
 .project-item .project-image {
-    /* * Taille de l'image ajustée : 
-     * Prend 100% de la largeur du conteneur (project-item) 
-     * mais ne dépasse JAMAIS 280px.
-     */
+    /* Taille de l'image ajustée */
     width: 100%; 
-    max-width: 280px; /* Taille réduite pour un affichage compact */
+    max-width: 250px; /* Taille maximale de 250px */
     height: auto;
     
-    /* Centrage et marge */
-    display: block; 
-    margin: 10px auto 15px auto; /* Centrage horizontal (auto) avec marge supérieure/inférieure */
+    float: right; /* Permet au texte de s'enrouler autour de l'image */
+    margin: 0 0 10px 15px; /* Marge: 0 haut, 0 droite, 10px bas, 15px gauche (pour séparer du texte) */
     
     /* Style visuel */
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
+}
+
+/* Règle nécessaire pour forcer les éléments suivants (comme les balises <hr> ou le prochain projet) 
+   à ne pas remonter à côté de l'image flottante. */
+.project-item::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* ************************************** */
