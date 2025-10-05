@@ -346,7 +346,7 @@ a.button:hover {
 .project-item .description {
     margin-top: 0;
     margin-bottom: 10px;
-    font-style: italic;
+    font-style: normal;
     color: #555;
 }
 /* Empêche les titres de section en gras d'être en italique */
