@@ -1,6 +1,6 @@
 /* ===== Style global et Améliorations UX ===== */
 html {
-    scroll-behavior: smooth; /* Défilement doux lors du clic sur les ancres (Mes Projets) */
+    scroll-behavior: smooth;
 }
 body { 
     background-color: #f9fbff;
@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     height: 100vh;
-    background: #003366; /* Couleur principale (Bleu foncé) */
+    background: #003366; 
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -59,10 +59,6 @@ h1, h2, h3, h4 {
     color: white; 
 }
 
-.sidebar p, .sidebar h3 {
-    margin: 10px 0;
-}
-
 /* Liens dans la sidebar (email, linkedin) */
 .sidebar a {
     color: #a0c3e6;
@@ -77,7 +73,7 @@ a.button {
     margin: 10px 0;
     padding: 10px;
     text-align: center;
-    background: #0066cc; /* COULEUR DES BOUTONS */
+    background: #0066cc; 
     color: white;
     border-radius: 6px;
     font-weight: bold;
@@ -89,7 +85,7 @@ a.button:hover {
     background: #004080;
 }
 
-/* Style des TITRES de section (h4) au-dessus des boîtes */
+/* Style des TITRES de section (h4) */
 .sidebar h4 {
     color: white; 
     margin-top: 25px; 
@@ -100,20 +96,17 @@ a.button:hover {
 
 
 /* ************************************** */
-/* SECTIONS DANS LA SIDEBAR (À Propos, Compétences, Outils) */
+/* SECTIONS DANS LA SIDEBAR */
 /* ************************************** */
 .sidebar .about,
 .sidebar .skills-tech-container,
 .sidebar .skills-tools-container {
-    background-color: #0066cc; /* Bleu moyen */
+    background-color: #0066cc;
     color: white; 
     padding: 15px;
     border-radius: 6px;
-    
-    /* Contraste visuel pour se détacher du fond bleu foncé */
     border: 1px solid rgba(255, 255, 255, 0.2); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-    
     margin-top: 5px; 
     margin-bottom: 20px; 
 }
@@ -124,13 +117,10 @@ a.button:hover {
     color: white; 
     font-weight: bold;
 }
-
-/* Réduction de la taille du texte "À propos" */
 .sidebar .about p {
     margin-top: 0; 
     font-size: 13px; 
 }
-
 
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
@@ -138,7 +128,7 @@ a.button:hover {
     flex-wrap: wrap; 
     gap: 8px;
     margin-top: 10px; 
-    line-height: 2.2; /* Espace entre les rangées de badges */
+    line-height: 2.2;
 }
 
 .skill-tag {
@@ -147,7 +137,6 @@ a.button:hover {
     color: #003366; 
     padding: 5px 12px;
     border-radius: 20px;
-    /* Réduction de la taille de police des badges */
     font-size: 0.85em; 
     font-weight: 600;
     white-space: nowrap;
@@ -160,7 +149,6 @@ a.button:hover {
     margin-top: 10px; 
 }
 
-/* Réduction de la taille de la liste des compétences */
 .skills-tech-list li {
     color: white; 
     margin-bottom: 5px;
@@ -169,7 +157,6 @@ a.button:hover {
     font-size: 13px;
 }
 
-/* Crée le tiret personnalisé */
 .skills-tech-list li::before {
     content: "—";
     color: white; 
@@ -183,95 +170,27 @@ a.button:hover {
     margin-left: 30%;
     padding: 40px;
     box-sizing: border-box;
-    padding-top: 5px; /* Ajustement pour le header sticky */
+    padding-top: 5px; 
 }
-/* Style pour les listes de détails à l'intérieur d'un élément de projet */
+
+/* Styles pour les listes de détails de projets */
 .project-item ul.project-details {
     list-style-type: disc;
     padding-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #333; /* Gris foncé pour une bonne lisibilité */
+    color: #333; 
 }
 
-.project-item ul.project-details li {
-    margin-bottom: 5px;
-}
-
-/* ************************************** */
-/* EN-TÊTE FIXE (Bienvenue + Boutons) */
-/* ************************************** */
-.header-main {
-    /* Propriétés pour Figer l'élément */
-    position: sticky; 
-    top: 0;         
-    z-index: 10;      
-    
-    /* Styles visuels pour l'élément fixe */
-    background-color: #f9fbff; /* Couleur de fond de la page */
-    padding: 15px 0 20px 0;    
-    border-bottom: 1px solid #e0e0e0; 
-    margin-bottom: 30px;
-
-    /* Propriétés Flexbox d'alignement */
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-}
-
-.header-main h1 {
-    margin: 0; 
-    font-size: 2.5em; 
-    color: #003366;
-}
-
-/* ************************************** */
-/* TITRE ANIMÉ */
-/* ************************************** */
-@keyframes wave {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(5px); } /* Léger déplacement */
-    100% { transform: translateX(0); }
-}
-
-.main .animated-title {
-    animation: wave 2s ease-in-out infinite; /* Application de l'animation */
-    display: inline-block; /* Nécessaire pour l'animation transform */
-}
-
-
-/* Style pour les boutons dans l'en-tête (Inline) */
-.header-buttons a.button-inline {
-    display: inline-block; /* Les met côte à côte */
-    padding: 8px 15px;
-    margin-left: 10px; /* Espace entre les boutons */
-    
-    background: #0066cc;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.header-buttons a.button-inline:hover {
-    background: #004080;
-}
-
-
-/* Sections principales (Conteneur) */
 .section {
     margin-bottom: 40px; 
     padding: 20px;
-    padding-top: 15px; /* Ajusté car le titre H2 est en dehors */
+    padding-top: 15px; 
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ************************************** */
-/* TITRES H2 DÉPLACÉS ET CENTRÉS */
-/* ************************************** */
 .main .section-title {
     text-align: center; 
     margin-top: 40px;    
@@ -289,7 +208,7 @@ a.button:hover {
 .experience-item { 
     background: #fcfcfc;
     border: 1px solid #e0e0e0;
-    border-left: 5px solid #0066cc; /* La ligne bleue verticale */
+    border-left: 5px solid #0066cc;
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 5px;
@@ -302,48 +221,13 @@ a.button:hover {
     transform: translateY(-2px);
 }
 
-/* Style des éléments dans le bloc Expérience */
-.experience-item h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-    color: #003366;
-}
-.experience-item p {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-.experience-item p em {
-    color: #555; /* Département en italique */
-    display: block; 
-    margin-bottom: 5px; 
-}
-.experience-item ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 20px; 
-    list-style-type: disc;
-    color: #333;
-}
-
-
 /* Style des éléments dans le bloc Projets */
-.project-item h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-}
-
 .project-item h3 a {
     color: #003366;
     text-decoration: underline;
     font-weight: bold;
 }
-.project-item h3 a:hover {
-    color: #0066cc;
-}
 
-/* CONFLIT RÉSOLU ICI : Applique l'italique à tout le paragraphe */
 .project-item .description {
     margin-top: 0;
     margin-bottom: 10px;
@@ -351,11 +235,9 @@ a.button:hover {
     color: #555;
 }
 
-/* RÈGLE DE CORRECTION : Force le contenu de la balise <strong> à ne pas être en italique */
 .project-item .description strong {
     font-style: normal;
 }
-
 
 .project-item .technologies {
     font-size: 0.9em;
@@ -364,36 +246,68 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* STYLE DES IMAGES DE PROJET (Flottant pour optimiser l'espace) */
+/* STYLE DES IMAGES DE PROJET (Flottant) */
 /* ************************************** */
 .project-item .project-image {
     width: 100%; 
-    max-width: 250px; /* Taille maximale de 250px */
+    max-width: 250px; /* Taille maximale réduite */
     height: auto;
     
-    float: right; /* Permet au texte de s'enrouler autour de l'image */
+    float: right; /* Place l'image à droite */
     margin: 0 0 10px 15px; /* Marge: 0 haut, 0 droite, 10px bas, 15px gauche */
     
-    /* Style visuel */
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
-
+/* Règle essentielle pour que les éléments suivants se placent correctement */
+.project-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* ************************************** */
-/* STICKER DE VÉRIFICATION D'AUTHENTICITÉ (Certifications) */
+/* STYLE DU BOUTON VOIR PLUS (par projet) */
+/* ************************************** */
+.project-item .button-project {
+    display: block; /* Nécessaire pour clear:both */
+    background-color: #e6f0ff; 
+    color: #003366; 
+    border: 1px solid #cce0ff;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* Assure que le bouton est SOUS l'image flottante */
+    clear: both; 
+    
+    width: fit-content; /* Le bouton ne prend que la largeur de son contenu */
+}
+
+.project-item .button-project:hover {
+    background-color: #0066cc; 
+    color: white;
+    text-decoration: none;
+}
+
+/* ************************************** */
+/* STICKER DE VÉRIFICATION (Certifications) */
 /* ************************************** */
 a.verification-sticker {
     display: inline-block;
-    background-color: #d4edda; /* Vert très clair */
-    color: #155724; /* Vert foncé pour le texte */
+    background-color: #d4edda;
+    color: #155724; 
     border: 1px solid #c3e6cb;
     padding: 2px 8px;
     margin-left: 10px;
     border-radius: 4px;
-    font-size: 0.85em; /* Rendre le sticker petit et discret */
+    font-size: 0.85em; 
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.2s;
@@ -415,46 +329,21 @@ a.verification-sticker:hover {
         padding: 20px;
     }
     
-    /* L'image flottante doit être affichée en haut et non flottante sur mobile */
+    /* Image sur mobile: plus de flottaison, image centrée et à 100% de largeur */
     .project-item .project-image {
         float: none; 
-        margin: 10px auto 15px auto; /* Centrage */
+        margin: 10px auto 15px auto; 
         max-width: 100%;
     }
     
+    /* Bouton sur mobile: plus besoin de nettoyer le flottement */
     .project-item .button-project {
-        clear: none; /* Inutile de nettoyer un flottement qui n'existe plus */
+        clear: none; 
+        width: 100%; /* Prend toute la largeur sur mobile */
+        text-align: center;
     }
 
-    /* Header principal (mobile) */
-    .header-main {
-        flex-direction: column; 
-        align-items: center; /* Titre et boutons centrés */
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        position: sticky; /* Reste sticky sur mobile également */
-    }
-
-    .header-main h1 {
-        margin-bottom: 10px;
-    }
-
-    .header-buttons {
-        width: 100%; 
-        display: flex; /* Aligne les boutons inline côte à côte sur mobile */
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    /* Boutons en ligne du header, ajustés pour mobile */
-    .header-buttons a.button-inline {
-        /* Garder inline-block, mais ajuster la marge pour le centrage */
-        margin: 0 5px; 
-        flex-grow: 1; /* Permet aux boutons de prendre la place équitablement */
-        max-width: 150px;
-    }
-
-    /* Style de la sidebar en haut de page mobile */
+    /* Ajustements de style pour le mode mobile */
     .sidebar {
         background: #f0f0f0; 
         color: #1a1a1a;
@@ -462,7 +351,6 @@ a.verification-sticker:hover {
         height: auto;
     }
     
-    /* Les sections bleues redeviennent claires sur mobile */
     .sidebar .about,
     .sidebar .skills-tech-container,
     .sidebar .skills-tools-container {
@@ -472,7 +360,6 @@ a.verification-sticker:hover {
         box-shadow: none;
     }
 
-    /* Couleurs de texte pour mobile */
     .sidebar h4 {
         color: #003366; 
     }
@@ -486,24 +373,10 @@ a.verification-sticker:hover {
     .sidebar h2, .sidebar h3 {
         color: #003366; 
     }
-    .sidebar img {
-        margin: 0 auto 10px;
-    }
-    .sidebar a {
-        color: #0066cc;
-    }
 
-    /* Compétences (Badges) sur mobile */
     .skill-tag {
         background: #e6f0ff; 
         color: #003366; 
         border: 1px solid #cce0ff;
-    }
-    
-    /* Éléments expérience/projet sur mobile */
-    .project-item,
-    .experience-item {
-        background: white;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 }
