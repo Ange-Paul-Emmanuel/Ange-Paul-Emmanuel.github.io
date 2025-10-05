@@ -380,41 +380,7 @@ a.button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
-/* ************************************** */
-/* STYLE DU BOUTON VOIR PLUS (par projet) */
-/* ************************************** */
-.project-item .button-project {
-    display: block; /* Important pour que clear:both fonctionne */
-    background-color: #e6f0ff; /* Bleu très clair */
-    color: #003366; /* Bleu foncé */
-    border: 1px solid #cce0ff;
-    padding: 6px 12px;
-    margin-top: 10px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    
-    /* Force le bouton à apparaître SOUS l'image flottante */
-    clear: both; 
-    
-    /* Pour le positionner correctement (ex: à gauche) */
-    width: fit-content; 
-}
 
-.project-item .button-project:hover {
-    background-color: #0066cc; /* Bleu moyen au survol */
-    color: white;
-    text-decoration: none;
-}
-
-/* Règle nécessaire pour forcer les blocs de projet suivants à ne pas remonter à côté de l'image flottante */
-.project-item::after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* ************************************** */
 /* STICKER DE VÉRIFICATION D'AUTHENTICITÉ (Certifications) */
