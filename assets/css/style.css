@@ -362,6 +362,24 @@ a.button:hover {
     color: #888;
     margin-top: 5px;
 }
+/* ************************************** */
+/* STYLE DES IMAGES DE PROJET */
+/* ************************************** */
+.project-item .project-image {
+    /* Taille de l'image : Ajustez la largeur à votre convenance */
+    width: 100%; 
+    max-width: 400px; /* Limite la largeur sur les grands écrans */
+    height: auto;
+    
+    /* Centrage et marge */
+    display: block; 
+    margin: 10px 0 15px 0; /* Haut/Bas de 10-15px */
+    
+    /* Style visuel */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Légère ombre */
+}
 
 /* ************************************** */
 /* STICKER DE VÉRIFICATION D'AUTHENTICITÉ */
