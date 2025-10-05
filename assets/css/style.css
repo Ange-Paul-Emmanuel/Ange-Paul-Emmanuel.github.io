@@ -346,12 +346,18 @@ a.button:hover {
 .project-item .description {
     margin-top: 0;
     margin-bottom: 10px;
-    font-style: normal;
+    font-style: italic;
     color: #555;
 }
 /* Empêche les titres de section en gras d'être en italique */
 .project-item .description strong {
     font-style: normal;
+}
+/* Correction pour assurer que les titres STRONG ne sont PAS en italique */
+/* La double classe renforce la spécificité */
+.project-item p.description strong {
+    font-style: normal !important; /* Force le style normal même s'il est écrasé ailleurs */
+    font-weight: bold; /* S'assurer qu'il reste en gras */
 }
 
 .project-item .technologies {
