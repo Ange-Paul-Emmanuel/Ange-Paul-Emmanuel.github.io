@@ -366,19 +366,22 @@ a.button:hover {
 /* STYLE DES IMAGES DE PROJET */
 /* ************************************** */
 .project-item .project-image {
-    /* Taille de l'image : Ajustez la largeur à votre convenance */
+    /* * Taille de l'image ajustée : 
+     * Prend 100% de la largeur du conteneur (project-item) 
+     * mais ne dépasse JAMAIS 280px.
+     */
     width: 100%; 
-    max-width: 400px; /* Limite la largeur sur les grands écrans */
+    max-width: 280px; /* Taille réduite pour un affichage compact */
     height: auto;
     
     /* Centrage et marge */
     display: block; 
-    margin: 10px 0 15px 0; /* Haut/Bas de 10-15px */
+    margin: 10px auto 15px auto; /* Centrage horizontal (auto) avec marge supérieure/inférieure */
     
     /* Style visuel */
     border: 1px solid #e0e0e0;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Légère ombre */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
 /* ************************************** */
