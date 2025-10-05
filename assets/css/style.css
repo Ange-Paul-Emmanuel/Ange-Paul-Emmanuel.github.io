@@ -271,7 +271,31 @@ a.button:hover {
     clear: both;
 }
 
+/* ************************************** */
+/* STYLE DU BOUTON VOIR PLUS (par projet) */
+/* ************************************** */
+.project-item .button-project {
+    display: inline-block;
+    background-color: #e6f0ff; /* Bleu très clair */
+    color: #003366; /* Bleu foncé */
+    border: 1px solid #cce0ff;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* Force le bouton à ne pas apparaître à côté de l'image flottante */
+    clear: both;
+}
 
+.project-item .button-project:hover {
+    background-color: #0066cc; /* Bleu moyen au survol */
+    color: white;
+    text-decoration: none;
+}
 
 /* ************************************** */
 /* STICKER DE VÉRIFICATION (Certifications) */
