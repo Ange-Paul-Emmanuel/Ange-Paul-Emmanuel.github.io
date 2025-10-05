@@ -105,7 +105,7 @@ a.button:hover {
 .sidebar .about,
 .sidebar .skills-tech-container,
 .sidebar .skills-tools-container {
-    background-color: #0066cc; 
+    background-color: #0066cc; /* Bleu moyen */
     color: white; 
     padding: 15px;
     border-radius: 6px;
@@ -362,17 +362,17 @@ a.button:hover {
     color: #888;
     margin-top: 5px;
 }
+
 /* ************************************** */
 /* STYLE DES IMAGES DE PROJET (Flottant pour optimiser l'espace) */
 /* ************************************** */
 .project-item .project-image {
-    /* Taille de l'image ajustée */
     width: 100%; 
     max-width: 250px; /* Taille maximale de 250px */
     height: auto;
     
     float: right; /* Permet au texte de s'enrouler autour de l'image */
-    margin: 0 0 10px 15px; /* Marge: 0 haut, 0 droite, 10px bas, 15px gauche (pour séparer du texte) */
+    margin: 0 0 10px 15px; /* Marge: 0 haut, 0 droite, 10px bas, 15px gauche */
     
     /* Style visuel */
     border: 1px solid #e0e0e0;
@@ -380,8 +380,36 @@ a.button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
-/* Règle nécessaire pour forcer les éléments suivants (comme les balises <hr> ou le prochain projet) 
-   à ne pas remonter à côté de l'image flottante. */
+/* ************************************** */
+/* STYLE DU BOUTON VOIR PLUS (par projet) */
+/* ************************************** */
+.project-item .button-project {
+    display: block; /* Important pour que clear:both fonctionne */
+    background-color: #e6f0ff; /* Bleu très clair */
+    color: #003366; /* Bleu foncé */
+    border: 1px solid #cce0ff;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* Force le bouton à apparaître SOUS l'image flottante */
+    clear: both; 
+    
+    /* Pour le positionner correctement (ex: à gauche) */
+    width: fit-content; 
+}
+
+.project-item .button-project:hover {
+    background-color: #0066cc; /* Bleu moyen au survol */
+    color: white;
+    text-decoration: none;
+}
+
+/* Règle nécessaire pour forcer les blocs de projet suivants à ne pas remonter à côté de l'image flottante */
 .project-item::after {
     content: "";
     display: table;
@@ -389,7 +417,7 @@ a.button:hover {
 }
 
 /* ************************************** */
-/* STICKER DE VÉRIFICATION D'AUTHENTICITÉ */
+/* STICKER DE VÉRIFICATION D'AUTHENTICITÉ (Certifications) */
 /* ************************************** */
 a.verification-sticker {
     display: inline-block;
@@ -421,6 +449,17 @@ a.verification-sticker:hover {
         padding: 20px;
     }
     
+    /* L'image flottante doit être affichée en haut et non flottante sur mobile */
+    .project-item .project-image {
+        float: none; 
+        margin: 10px auto 15px auto; /* Centrage */
+        max-width: 100%;
+    }
+    
+    .project-item .button-project {
+        clear: none; /* Inutile de nettoyer un flottement qui n'existe plus */
+    }
+
     /* Header principal (mobile) */
     .header-main {
         flex-direction: column; 
