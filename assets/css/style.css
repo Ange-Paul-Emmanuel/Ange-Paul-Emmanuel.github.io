@@ -300,6 +300,11 @@ a.button:hover {
     font-style: normal;
 }
 
+/* Assure que la balise <strong> et <b> sont toujours en gras */
+strong, b {
+    font-weight: bold; /* Force le navigateur à appliquer le gras */
+}
+
 .project-item .technologies {
     font-size: 0.9em;
     color: #888;
