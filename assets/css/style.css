@@ -415,8 +415,8 @@ a.verification-sticker:hover {
 }
 /* Booster la taille des icônes dans les badges */
 .skill-tag i {
-    font-size: 1.5em;       /* Augmente significativement la taille */
-    margin-right: 10px;     /* Espace un peu plus l'icône du texte */
+    font-size: 1.2em;       /* Augmente significativement la taille */
+    margin-right: 8px;     /* Espace un peu plus l'icône du texte */
     vertical-align: middle; /* Aligne parfaitement l'icône au centre du texte */
     display: inline-block;  /* Assure que la transformation s'applique bien */
 }
