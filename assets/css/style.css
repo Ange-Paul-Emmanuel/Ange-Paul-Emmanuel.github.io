@@ -383,6 +383,35 @@ a.verification-sticker:hover {
     text-decoration: none;
 }
 
+/* Style des icônes dans les tags */
+.skill-tag i {
+    margin-right: 8px; /* Espace entre le logo et le texte */
+    font-size: 1.1em;  /* Rend l'icône un poil plus grande */
+    vertical-align: middle;
+}
+
+/* On garde ton style de tag élégant */
+.skill-tag {
+    display: inline-flex; /* Permet un alignement parfait icône/texte */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); 
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.skill-tag:hover {
+    background: white;
+    color: #003366;
+    transform: scale(1.05); /* Petit effet de zoom au survol */
+}
+
+
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
 /* ************************************** */
@@ -406,6 +435,7 @@ a.verification-sticker:hover {
     .header-main h1 {
         margin-bottom: 10px;
     }
+    
 
     .header-buttons {
         width: 100%; 
