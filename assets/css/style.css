@@ -412,6 +412,68 @@ h1, h2, h3, h4 {
 /* ########################################## */
 /* ########################################## */
 /* ########################################## */
+/* --- Style des Certificats en bandes horizontales --- */
+.certif-item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    
+    /* La petite bande horizontale/verticale à gauche */
+    border-left: 5px solid #0066cc; 
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.certif-item:hover {
+    transform: translateX(5px); /* Petit décalage vers la droite au survol */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Alignement du contenu interne */
+.certif-info {
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte sur la même ligne */
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.certif-icon {
+    font-size: 1.5em;
+    color: #0066cc;
+    width: 30px;
+    text-align: center;
+}
+
+.certif-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.certif-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #003366;
+}
+
+.certif-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Conteneur des boutons en bas de la bande */
+.certif-actions {
+    display: flex;
+    gap: 10px;
+    padding-left: 45px; /* Aligne les boutons sous le texte (après l'icône) */
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
 
 /* --- Boutons des Certifications --- */
 
