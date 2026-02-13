@@ -163,6 +163,7 @@ a.button:hover {
     margin-top: 0; 
     font-size: 13px; 
 }
+
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
     display: flex; 
@@ -184,42 +185,60 @@ a.button:hover {
 }
 
 /* ===== Liste Compétences Techniques (Tirets) ===== */
-.skills-card {
-    /* Utilisation du bleu vif de ton portfolio */
-    background-color: #0066cc; 
+.skills-box-simple {
+    background: rgba(255, 255, 255, 0.05); /* Fond subtil */
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    border-left: 3px solid #a0c3e6; /* Ligne d'accentuation sur le côté */
 }
 
-.skills-card ul {
-    list-style: none;
+.skills-box-simple ul {
+    list-style: none; /* On enlève les puces par défaut */
     padding: 0;
     margin: 0;
 }
 
-.skills-card li {
+.skills-box-simple li {
     color: white;
     font-size: 0.95em;
-    font-weight: 500;
     margin-bottom: 12px;
-    padding-left: 20px;
+    padding-left: 15px;
     position: relative;
-    display: flex;
-    align-items: center;
+    font-weight: 500;
 }
 
-/* Le tiret blanc élégant */
-.skills-card li::before {
-    content: "—";
+/* Création d'un tiret stylisé en CSS */
+.skills-box-simple li::before {
+    content: "";
     position: absolute;
     left: 0;
-    color: rgba(255, 255, 255, 0.7); /* Tiret blanc légèrement transparent */
-    font-weight: bold;
+    top: 50%;
+    width: 6px;
+    height: 2px;
+    background-color: #a0c3e6; /* Couleur assortie à ton thème */
+    border-radius: 2px;
 }
 
-.skills-card li:last-child {
+.skills-box-simple li:last-child {
     margin-bottom: 0;
+}
+
+
+/* ===== Colonne principale (Contenu) ===== */
+.main {
+    margin-left: 30%;
+    padding: 40px;
+    box-sizing: border-box;
+    padding-top: 5px; 
+}
+
+/* Styles pour les listes de détails de projets */
+.project-item ul.project-details {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333; 
 }
 
 /* ************************************** */
