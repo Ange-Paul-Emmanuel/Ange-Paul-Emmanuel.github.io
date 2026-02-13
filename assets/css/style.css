@@ -185,13 +185,13 @@ a.button:hover {
 }
 
 /* ===== Liste Compétences Techniques (Tirets) ===== */
-.skills-tech-list {
+.technical-skills-container {
     list-style-type: none; 
     padding-left: 0; 
     margin-top: 10px; 
 }
 
-.skills-tech-list li {
+.technical-skills-container li {
     color: white; 
     margin-bottom: 5px;
     padding-left: 15px; 
@@ -199,7 +199,7 @@ a.button:hover {
     font-size: 13px;
 }
 
-.skills-tech-list li::before {
+.technical-skills-container li::before {
     content: "—";
     color: white; 
     position: absolute;
@@ -207,46 +207,7 @@ a.button:hover {
     font-weight: bold;
 }
 
-.technical-skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* Espace entre les lignes */
-    padding: 15px !important;
-}
 
-.tech-skill-item {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05); /* Fond très léger pour structurer */
-    padding: 8px;
-    border-radius: 50px; /* Forme pilule */
-    transition: background 0.3s;
-}
-
-.tech-skill-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-/* On reprend le style de tes icônes de contact */
-.tech-skill-item i {
-    color: #003366;          /* Icône bleue */
-    background-color: white; /* Cercle blanc */
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9em;
-    margin-right: 12px;
-    flex-shrink: 0;
-}
-
-.tech-skill-item span {
-    color: white;
-    font-size: 0.9em;
-    font-weight: 500;
-}
 
 /* ===== Colonne principale (Contenu) ===== */
 .main {
