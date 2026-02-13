@@ -413,99 +413,49 @@ h1, h2, h3, h4 {
 /* ########################################## */
 /* ########################################## */
 
-/* Style du conteneur de liste des certifs */
-.certif ul {
-    list-style: none;
-    padding: 0;
-}
-
-.certif-item {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #eef2f6;
-    transition: transform 0.2s ease;
-    display: flex;
-    flex-direction: column; /* On empile texte et boutons sur mobile */
-    gap: 12px;
-}
-
-.certif-item:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Alignement Icône + Titre */
-.certif-info {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.certif-icon {
-    color: #0066cc;
-    font-size: 1.4em;
-    margin-top: 3px;
-}
-
-.certif-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.certif-title {
-    font-weight: bold;
-    color: #003366;
-    font-size: 1.05em;
-}
-
-.certif-date {
-    font-size: 0.85em;
-    color: #777;
-    font-style: italic;
-}
-
-/* Boutons d'actions */
-.certif-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+/* --- Boutons des Certifications avec encadrement léger --- */
 
 .certif-link, .verification-sticker {
     font-size: 0.8em;
-    padding: 5px 12px;
-    border-radius: 50px;
+    padding: 6px 14px;
+    border-radius: 8px; /* Forme rectangulaire arrondie plus pro que 50px */
     text-decoration: none !important;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-/* Style "Voir Certificat" */
+/* Style "Voir le Certificat" (Bleu discret) */
 .certif-link {
-    background-color: #f0f7ff;
-    color: #0066cc;
-    border: 1px solid #0066cc;
+    background-color: #ffffff;      /* Fond blanc */
+    color: #0066cc;                /* Texte bleu */
+    border: 1px solid #d0e4ff;     /* Cadre bleu très clair */
 }
 
 .certif-link:hover {
-    background-color: #0066cc;
-    color: white;
+    background-color: #f0f7ff;
+    border-color: #0066cc;         /* Le cadre s'assombrit au survol */
+    box-shadow: 0 2px 5px rgba(0, 102, 204, 0.1);
 }
 
-/* Style "Authenticité" (Vert pour rassurer) */
+/* Style "Authenticité" (Vert discret) */
 .verification-sticker {
-    background-color: #e6fffa;
-    color: #28a745;
-    border: 1px solid #28a745;
+    background-color: #ffffff;      /* Fond blanc */
+    color: #28a745;                /* Texte vert */
+    border: 1px solid #cceebb;     /* Cadre vert très clair */
 }
 
 .verification-sticker:hover {
-    background-color: #28a745;
-    color: white;
+    background-color: #f2fff5;
+    border-color: #28a745;         /* Le cadre s'assombrit au survol */
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.1);
+}
+
+/* Ajustement pour l'icône dans les boutons */
+.certif-link i, .verification-sticker i {
+    font-size: 1.1em;
 }
 
 /* ########################################## */
