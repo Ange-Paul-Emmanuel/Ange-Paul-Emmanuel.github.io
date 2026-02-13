@@ -22,6 +22,67 @@ a:hover {
     color: #004080;
     text-decoration: underline;
 }
+/* #######################################
+/* Animation du Titre Bienvenue */
+.header-main h1 {
+    background: linear-gradient(90deg, #003366, #0066cc, #003366);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 4s linear infinite;
+    display: inline-block;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+
+/* #######################################
+
+/* Boutons de l'en-tête avec cadre (CV & Projets Data) */
+.header-buttons a.button-inline {
+    background: transparent;      /* Fond vide */
+    color: #0066cc;               /* Texte bleu */
+    border: 2px solid #0066cc;    /* CADRE bleu */
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+/* Effet au survol des boutons du haut */
+.header-buttons a.button-inline:hover {
+    background: #0066cc;          /* Se remplit au survol */
+    color: white;                 /* Texte devient blanc */
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* #######################################
+
+/* Bouton Voir plus avec cadre */
+.project-item .button-project {
+    display: inline-block;
+    background: white;            /* Fond blanc */
+    color: #003366;               /* Texte bleu foncé */
+    border: 1.5px solid #003366;  /* CADRE bleu foncé */
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.project-item .button-project:hover {
+    background: #003366;          /* Remplissage au survol */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 /* ===== Titres (Général) ===== */
 h1, h2, h3, h4 {
