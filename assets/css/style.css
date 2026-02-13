@@ -413,6 +413,105 @@ h1, h2, h3, h4 {
 /* ########################################## */
 /* ########################################## */
 
+/* Style du conteneur de liste des certifs */
+.certif ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certif-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eef2f6;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column; /* On empile texte et boutons sur mobile */
+    gap: 12px;
+}
+
+.certif-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Alignement Icône + Titre */
+.certif-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.certif-icon {
+    color: #0066cc;
+    font-size: 1.4em;
+    margin-top: 3px;
+}
+
+.certif-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.certif-title {
+    font-weight: bold;
+    color: #003366;
+    font-size: 1.05em;
+}
+
+.certif-date {
+    font-size: 0.85em;
+    color: #777;
+    font-style: italic;
+}
+
+/* Boutons d'actions */
+.certif-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.certif-link, .verification-sticker {
+    font-size: 0.8em;
+    padding: 5px 12px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Style "Voir Certificat" */
+.certif-link {
+    background-color: #f0f7ff;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.certif-link:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+/* Style "Authenticité" (Vert pour rassurer) */
+.verification-sticker {
+    background-color: #e6fffa;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.verification-sticker:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+
 /* Responsive : sur mobile, on empile le logo et le texte */
 @media (max-width: 600px) {
     .item-header-with-logo {
