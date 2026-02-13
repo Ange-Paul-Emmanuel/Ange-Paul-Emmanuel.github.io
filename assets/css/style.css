@@ -382,6 +382,9 @@ a.verification-sticker:hover {
     background-color: #c3e6cb;
     text-decoration: none;
 }
+/* ************************************** */
+/* Style des icônes dans les tags */
+/* ************************************** */
 
 /* Style des icônes dans les tags */
 .skill-tag i {
@@ -410,7 +413,26 @@ a.verification-sticker:hover {
     color: #003366;
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
+/* Couleurs spécifiques pour les icônes */
+.fa-python { color: #3776AB; }
+.fa-database { color: #4479A1; } /* Pour SQL */
+.fa-chart-column { color: #F2C811; } /* Pour Power BI */
+.fa-table-columns { color: #E97627; } /* Pour Tableau */
+.fa-r-project, .fa-chart-simple { color: #276DC3; } /* Pour R */
 
+.fa-cloud { color: #FF3621; } /* Pour Databricks */
+.fa-docker { color: #2496ED; }
+.fa-magnifying-glass-chart { color: #005571; } /* Pour ELK */
+.fa-gauge-high { color: #F46800; } /* Pour Grafana */
+
+.fa-git-alt { color: #F05032; }
+.fa-code { color: #007ACC; } /* Pour VS Code */
+
+/* Optionnel : Un petit effet au survol du badge pour que l'icône ressorte */
+.skill-tag:hover i {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
 
 /* ************************************** */
 /* RESPONSIVE (Mobile) */
