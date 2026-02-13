@@ -185,28 +185,43 @@ a.button:hover {
 }
 
 /* ===== Liste Compétences Techniques (Tirets) ===== */
-.technical-skills-container {
-    list-style-type: none; 
-    padding-left: 0; 
-    margin-top: 10px; 
+.skills-box-simple {
+    background: rgba(255, 255, 255, 0.05); /* Fond subtil */
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 3px solid #a0c3e6; /* Ligne d'accentuation sur le côté */
 }
 
-.technical-skills-container li {
-    color: white; 
-    margin-bottom: 5px;
-    padding-left: 15px; 
-    position: relative; 
-    font-size: 13px;
+.skills-box-simple ul {
+    list-style: none; /* On enlève les puces par défaut */
+    padding: 0;
+    margin: 0;
 }
 
-.technical-skills-container li::before {
-    content: "—";
-    color: white; 
+.skills-box-simple li {
+    color: white;
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+    font-weight: 500;
+}
+
+/* Création d'un tiret stylisé en CSS */
+.skills-box-simple li::before {
+    content: "";
     position: absolute;
-    left: 0; 
-    font-weight: bold;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 2px;
+    background-color: #a0c3e6; /* Couleur assortie à ton thème */
+    border-radius: 2px;
 }
 
+.skills-box-simple li:last-child {
+    margin-bottom: 0;
+}
 
 
 /* ===== Colonne principale (Contenu) ===== */
