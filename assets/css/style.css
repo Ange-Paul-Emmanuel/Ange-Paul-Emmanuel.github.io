@@ -102,6 +102,37 @@ a:hover {
     animation: shine 3s linear infinite; /* On remplace wave par shine */
 }
 
+/* ===== Style du bouton GitHub (et autres boutons sidebar) ===== */
+.sidebar a.button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    
+    /* Le Cadre */
+    background: transparent;            /* Fond transparent */
+    color: white;                       /* Texte blanc */
+    border: 2px solid white;            /* Cadre blanc */
+    
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;                      /* Pour aligner l'icône et le texte */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                          /* Espace entre le poulpe et le texte */
+}
+
+/* Effet au survol du bouton GitHub */
+.sidebar a.button:hover {
+    background: white;                  /* Se remplit en blanc */
+    color: #003366;                     /* Le texte devient bleu foncé */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);        /* Petit effet de soulèvement */
+}
+
+
 /* ################################### */
 
 /* ===== Titres (Général) ===== */
