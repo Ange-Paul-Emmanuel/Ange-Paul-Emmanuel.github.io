@@ -413,12 +413,27 @@ a.verification-sticker:hover {
     color: #003366;
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
-/* Booster la taille des icônes dans les badges */
+
+/* NOUVEAU STYLE POUR LES ICÔNES */
 .skill-tag i {
-    font-size: 1.2em;       /* Augmente significativement la taille */
-    margin-right: 8px;     /* Espace un peu plus l'icône du texte */
-    vertical-align: middle; /* Aligne parfaitement l'icône au centre du texte */
-    display: inline-block;  /* Assure que la transformation s'applique bien */
+    /* Couleurs demandées */
+    color: #003366;          /* L'icône elle-même est bleue */
+    background-color: white; /* Le fond derrière l'icône est blanc */
+
+    /* Création du cercle blanc */
+    border-radius: 50%;      /* Rend le fond parfaitement rond */
+    width: 32px;             /* Largeur fixe du cercle */
+    height: 32px;            /* Hauteur fixe du cercle */
+    
+    /* Centrage parfait de l'icône dans le cercle */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Taille et espacement */
+    font-size: 1.2em;        /* Taille de l'icône à l'intérieur du cercle */
+    margin-right: 10px;      /* Espace entre le cercle blanc et le texte du badge */
+    vertical-align: middle;  /* Aligne le cercle avec le texte */
 }
 
 /* Ajustement du badge pour accueillir l'icône plus grande */
@@ -427,10 +442,6 @@ a.verification-sticker:hover {
     align-items: center;
     padding: 8px 15px;      /* Un peu plus d'espace interne */
     font-weight: 600;       /* Texte un peu plus épais pour équilibrer */
-}
-.skill-tag:hover i {
-    transform: scale(1.2); /* L'icône grossit légèrement au survol */
-    transition: transform 0.2s ease-in-out;
 }
 
 /* ************************************** */
