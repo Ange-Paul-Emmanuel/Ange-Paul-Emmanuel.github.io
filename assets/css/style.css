@@ -93,32 +93,41 @@ a.button:hover {
     padding-left: 5px; 
     font-size: 1.1em; 
 }
-/* Style spécifique pour les icônes de contact */
-.contact-links a {
-    text-decoration: none;
-    display: inline-flex;
+/* Barre de contact horizontale */
+.contact-bar {
+    display: flex;
+    flex-wrap: nowrap; /* Empêche le retour à la ligne */
     align-items: center;
-    margin-bottom: 8px;
-    color: #a0c3e6; /* Couleur du lien dans la sidebar */
+    gap: 12px;         /* Espace entre les éléments */
+    margin-top: 10px;
 }
 
-.contact-links i {
+.contact-bar a {
+    text-decoration: none;
+    color: #a0c3e6;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    white-space: nowrap; /* Garde l'email sur une ligne */
+}
+
+/* Style des bulles d'icônes (Bleu sur Blanc) */
+.contact-bar i {
     color: #003366;          /* Icône bleue */
     background-color: white; /* Fond blanc */
-    border-radius: 50%;      /* Cercle parfait */
-    width: 24px;             /* Taille plus compacte pour le texte */
-    height: 24px;
+    border-radius: 50%;
+    width: 28px;             /* Taille uniforme */
+    height: 28px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
-    font-size: 0.9em;        /* Taille du logo à l'intérieur */
+    font-size: 1.1em;
 }
 
-.contact-links a:hover {
+/* Effet au survol pour les liens */
+.contact-bar a:hover {
     color: white;
 }
-
 
 /* ************************************** */
 /* SECTIONS DANS LA SIDEBAR */
