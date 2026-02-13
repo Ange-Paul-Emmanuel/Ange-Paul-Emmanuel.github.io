@@ -124,6 +124,13 @@ a.button:hover {
     margin-top: 15px;
 }
 
+/* LE TEXTE DU MAIL */
+.contact-bar span {
+    margin-left: 8px;
+    font-size: 0.9em;
+    white-space: nowrap;     /* Force le texte à rester sur une ligne */
+}
+
 /* Optionnel : légère réaction au survol */
 .contact-bar a:hover i {
     background-color: #a0c3e6; /* Le fond devient bleu clair au survol */
