@@ -413,49 +413,48 @@ h1, h2, h3, h4 {
 /* ########################################## */
 /* ########################################## */
 
-/* --- Boutons des Certifications avec encadrement léger --- */
+/* --- Boutons des Certifications --- */
 
-.certif-link, .verification-sticker {
-    font-size: 0.8em;
-    padding: 6px 14px;
-    border-radius: 8px; /* Forme rectangulaire arrondie plus pro que 50px */
+/* On cible spécifiquement les liens dans la section certification pour forcer le cadre */
+.section.certif a.certif-link, 
+.section.certif a.verification-sticker {
+    display: inline-flex !important; /* Force l'affichage en bloc pour voir le cadre */
+    font-size: 0.85em !important;
+    padding: 6px 14px !important;
+    margin: 5px 5px 5px 0 !important;
+    border-radius: 8px !important;
     text-decoration: none !important;
-    display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-weight: 600;
+    font-weight: 600 !important;
     transition: all 0.3s ease;
+    
+    /* LE CADRE : On le met plus foncé pour être sûr qu'il se voit */
+    border: 1.5px solid #0066cc !important; 
+    background-color: #ffffff !important;
 }
 
-/* Style "Voir le Certificat" (Bleu discret) */
-.certif-link {
-    background-color: #ffffff;      /* Fond blanc */
-    color: #0066cc;                /* Texte bleu */
-    border: 1px solid #d0e4ff;     /* Cadre bleu très clair */
+/* Style spécifique pour le bouton Bleu */
+.section.certif a.certif-link {
+    color: #0066cc !important;
+    border-color: #0066cc !important;
 }
 
-.certif-link:hover {
-    background-color: #f0f7ff;
-    border-color: #0066cc;         /* Le cadre s'assombrit au survol */
-    box-shadow: 0 2px 5px rgba(0, 102, 204, 0.1);
+/* Style spécifique pour le bouton Vert (Authenticité) */
+.section.certif a.verification-sticker {
+    color: #28a745 !important;
+    border-color: #28a745 !important;
 }
 
-/* Style "Authenticité" (Vert discret) */
-.verification-sticker {
-    background-color: #ffffff;      /* Fond blanc */
-    color: #28a745;                /* Texte vert */
-    border: 1px solid #cceebb;     /* Cadre vert très clair */
+/* Effets au survol */
+.section.certif a.certif-link:hover {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
 }
 
-.verification-sticker:hover {
-    background-color: #f2fff5;
-    border-color: #28a745;         /* Le cadre s'assombrit au survol */
-    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.1);
-}
-
-/* Ajustement pour l'icône dans les boutons */
-.certif-link i, .verification-sticker i {
-    font-size: 1.1em;
+.section.certif a.verification-sticker:hover {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
 }
 
 /* ########################################## */
