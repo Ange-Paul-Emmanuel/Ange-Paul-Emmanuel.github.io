@@ -93,40 +93,41 @@ a.button:hover {
     padding-left: 5px; 
     font-size: 1.1em; 
 }
-/* Barre de contact horizontale */
-.contact-bar {
-    display: flex;
-    flex-wrap: nowrap; /* Empêche le retour à la ligne */
-    align-items: center;
-    gap: 12px;         /* Espace entre les éléments */
-    margin-top: 10px;
-}
 
-.contact-bar a {
-    text-decoration: none;
-    color: #a0c3e6;
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-    white-space: nowrap; /* Garde l'email sur une ligne */
-}
-
-/* Style des bulles d'icônes (Bleu sur Blanc) */
+/* Style des grosses icônes rondes de contact */
 .contact-bar i {
     color: #003366;          /* Icône bleue */
     background-color: white; /* Fond blanc */
+    
+    /* Création de la forme ronde */
     border-radius: 50%;
-    width: 28px;             /* Taille uniforme */
-    height: 28px;
+    width: 36px;             /* On augmente la taille du cercle */
+    height: 36px;
+    
+    /* Centrage de l'icône */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1em;
+    
+    /* Taille de l'icône FontAwesome */
+    font-size: 1.3em;        /* Icône plus imposante */
+    
+    /* Transition pour un effet fluide si besoin */
+    transition: all 0.3s ease;
 }
 
-/* Effet au survol pour les liens */
-.contact-bar a:hover {
-    color: white;
+/* Alignement de la barre */
+.contact-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;               /* Plus d'espace entre les bulles */
+    margin-top: 15px;
+}
+
+/* Optionnel : légère réaction au survol */
+.contact-bar a:hover i {
+    background-color: #a0c3e6; /* Le fond devient bleu clair au survol */
+    color: #003366;
 }
 
 /* ************************************** */
