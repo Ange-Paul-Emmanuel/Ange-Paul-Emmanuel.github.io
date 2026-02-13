@@ -413,25 +413,24 @@ a.verification-sticker:hover {
     color: #003366;
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
-/* Couleurs spécifiques pour les icônes */
-.fa-python { color: #3776AB; }
-.fa-database { color: #4479A1; } /* Pour SQL */
-.fa-chart-column { color: #F2C811; } /* Pour Power BI */
-.fa-table-columns { color: #E97627; } /* Pour Tableau */
-.fa-r-project, .fa-chart-simple { color: #276DC3; } /* Pour R */
+/* Booster la taille des icônes dans les badges */
+.skill-tag i {
+    font-size: 1.5em;       /* Augmente significativement la taille */
+    margin-right: 10px;     /* Espace un peu plus l'icône du texte */
+    vertical-align: middle; /* Aligne parfaitement l'icône au centre du texte */
+    display: inline-block;  /* Assure que la transformation s'applique bien */
+}
 
-.fa-cloud { color: #FF3621; } /* Pour Databricks */
-.fa-docker { color: #2496ED; }
-.fa-magnifying-glass-chart { color: #005571; } /* Pour ELK */
-.fa-gauge-high { color: #F46800; } /* Pour Grafana */
-
-.fa-git-alt { color: #F05032; }
-.fa-code { color: #007ACC; } /* Pour VS Code */
-
-/* Optionnel : Un petit effet au survol du badge pour que l'icône ressorte */
+/* Ajustement du badge pour accueillir l'icône plus grande */
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;      /* Un peu plus d'espace interne */
+    font-weight: 600;       /* Texte un peu plus épais pour équilibrer */
+}
 .skill-tag:hover i {
-    transform: scale(1.2);
-    transition: transform 0.2s;
+    transform: scale(1.2); /* L'icône grossit légèrement au survol */
+    transition: transform 0.2s ease-in-out;
 }
 
 /* ************************************** */
