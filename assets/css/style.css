@@ -357,39 +357,58 @@ h1, h2, h3, h4 {
 /* ########################################## */
 
 
-/* Conteneur pour aligner Logo + Texte */
+/* Conteneur aligné avec le logo miniature */
 .item-header-with-logo {
     display: flex;
-    align-items: flex-start; /* Aligne le logo en haut du texte */
-    gap: 20px;               /* Espace entre le logo et le texte */
-    margin-bottom: 15px;
+    align-items: center; /* Aligne le logo verticalement au milieu du titre */
+    gap: 15px;           /* Espace entre le logo et le texte */
+    margin-bottom: 12px;
 }
 
-/* Style du logo de l'entreprise */
+/* Le Logo miniature décalé */
 .company-logo {
-    width: 60px;             /* Taille du logo */
-    height: 60px;
-    object-fit: contain;     /* Évite de déformer le logo */
-    border-radius: 8px;      /* Coins légèrement arrondis */
-    background-color: white; /* Fond blanc au cas où le logo est transparent */
-    padding: 5px;            /* Petit espace interne */
-    border: 1px solid #eee;  /* Bordure très fine */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 45px;             /* Taille miniature */
+    height: 45px;
+    flex-shrink: 0;          /* Empêche le logo de rétrécir */
+    object-fit: contain;     /* Garde les proportions du logo */
+    background-color: white; 
+    padding: 4px;
+    border-radius: 6px;      /* Coins arrondis style icône appli */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Ajustements textuels pour plus de clarté */
-.company-name {
-    margin: 0;
+/* Ajustement des titres à côté du logo */
+.item-header-with-logo h3 {
+    margin: 0;               /* Supprime les marges par défaut */
+    font-size: 1.2em;
     color: #003366;
-    font-size: 1.1em;
+}
+
+.company-name {
+    margin: 2px 0 0 0;
+    font-size: 0.95em;
+    color: #0066cc;
+    font-weight: bold;
 }
 
 .experience-dates {
-    margin: 2px 0 0 0;
-    font-size: 0.9em;
-    color: #666;
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 2px;
 }
 
+/* Version Mobile : on garde l'alignement horizontal mais on réduit un peu */
+@media (max-width: 600px) {
+    .company-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .item-header-with-logo h3 {
+        font-size: 1.1em;
+    }
+}
 /* ########################################## */
 /* ########################################## */
 /* ########################################## */
