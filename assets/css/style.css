@@ -25,21 +25,56 @@ a:hover {
 /* #######################################
 
 /* ************************************** */
-/* ANIMATION DU TITRE "BIENVENUE" */
+/* TITRE BIENVENUE : TAILLE ET DYNAMISME */
 /* ************************************** */
 .animated-title {
-    background: linear-gradient(90deg, #003366, #0066cc, #003366);
-    background-size: 200% auto;
+    /* Augmentation de la taille */
+    font-size: 3.2em; 
+    font-weight: 900;
+    margin: 0;
+    
+    /* Effet de couleur dégradée */
+    background: linear-gradient(90deg, #003366, #0066cc, #00b3ff, #003366);
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-    font-weight: 800;
+    
+    /* Double animation : Couleurs + Mouvement */
+    animation: 
+        shine 4s linear infinite, 
+        floatContinuous 3s ease-in-out infinite;
+    
     display: inline-block;
+    letter-spacing: -1px; /* Pour un look plus moderne/compact */
 }
 
+/* Animation des couleurs (défilement) */
 @keyframes shine {
-    to {
-        background-position: 200% center;
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
+}
+
+/* Animation de mouvement (flottement fluide) */
+@keyframes floatContinuous {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Le titre monte de 10px */
+    }
+}
+
+/* Ajustement pour le header-main pour éviter que le titre ne touche le haut */
+.header-main {
+    padding: 30px 0; /* Plus d'espace pour laisser respirer le gros titre */
+}
+
+/* ************************************** */
+/* RESPONSIVE : Titre plus petit sur mobile */
+/* ************************************** */
+@media (max-width: 900px) {
+    .animated-title {
+        font-size: 2em; /* Réduction pour éviter que ça dépasse sur téléphone */
     }
 }
 
@@ -101,37 +136,6 @@ a:hover {
 .main .animated-title {
     animation: shine 3s linear infinite; /* On remplace wave par shine */
 }
-
-/* ===== Style du bouton GitHub (et autres boutons sidebar) ===== */
-.sidebar a.button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    
-    /* Le Cadre */
-    background: transparent;            /* Fond transparent */
-    color: white;                       /* Texte blanc */
-    border: 2px solid white;            /* Cadre blanc */
-    
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;                      /* Pour aligner l'icône et le texte */
-    align-items: center;
-    justify-content: center;
-    gap: 10px;                          /* Espace entre le poulpe et le texte */
-}
-
-/* Effet au survol du bouton GitHub */
-.sidebar a.button:hover {
-    background: white;                  /* Se remplit en blanc */
-    color: #003366;                     /* Le texte devient bleu foncé */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);        /* Petit effet de soulèvement */
-}
-
 
 /* ################################### */
 
