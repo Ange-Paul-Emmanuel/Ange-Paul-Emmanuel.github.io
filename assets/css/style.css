@@ -164,6 +164,29 @@ a.button:hover {
     font-size: 13px; 
 }
 
+.sidebar .skills-card,
+.sidebar .skills-tech-container,
+.sidebar .skills-tools-container {
+    background-color: #0066cc;
+    color: white; 
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+/* Assure que le texte et le gras dans ces blocs sont blancs */
+.sidebar .skills-card p strong,
+.skills-tech-list li strong {
+    color: white; 
+    font-weight: bold;
+}
+.sidebar .skills-card p {
+    margin-top: 0; 
+    font-size: 13px; 
+}
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
     display: flex; 
@@ -185,60 +208,42 @@ a.button:hover {
 }
 
 /* ===== Liste Compétences Techniques (Tirets) ===== */
-.skills-box-simple {
-    background: rgba(255, 255, 255, 0.05); /* Fond subtil */
+.skills-card {
+    /* Utilisation du bleu vif de ton portfolio */
+    background-color: #0066cc; 
     padding: 20px;
     border-radius: 12px;
-    border-left: 3px solid #a0c3e6; /* Ligne d'accentuation sur le côté */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
 }
 
-.skills-box-simple ul {
-    list-style: none; /* On enlève les puces par défaut */
+.skills-card ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.skills-box-simple li {
+.skills-card li {
     color: white;
     font-size: 0.95em;
-    margin-bottom: 12px;
-    padding-left: 15px;
-    position: relative;
     font-weight: 500;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-/* Création d'un tiret stylisé en CSS */
-.skills-box-simple li::before {
-    content: "";
+/* Le tiret blanc élégant */
+.skills-card li::before {
+    content: "—";
     position: absolute;
     left: 0;
-    top: 50%;
-    width: 6px;
-    height: 2px;
-    background-color: #a0c3e6; /* Couleur assortie à ton thème */
-    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.7); /* Tiret blanc légèrement transparent */
+    font-weight: bold;
 }
 
-.skills-box-simple li:last-child {
+.skills-card li:last-child {
     margin-bottom: 0;
-}
-
-
-/* ===== Colonne principale (Contenu) ===== */
-.main {
-    margin-left: 30%;
-    padding: 40px;
-    box-sizing: border-box;
-    padding-top: 5px; 
-}
-
-/* Styles pour les listes de détails de projets */
-.project-item ul.project-details {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #333; 
 }
 
 /* ************************************** */
