@@ -163,30 +163,6 @@ a.button:hover {
     margin-top: 0; 
     font-size: 13px; 
 }
-
-.sidebar .skills-card,
-.sidebar .skills-tech-container,
-.sidebar .skills-tools-container {
-    background-color: #0066cc;
-    color: white; 
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-    margin-top: 5px; 
-    margin-bottom: 20px; 
-}
-
-/* Assure que le texte et le gras dans ces blocs sont blancs */
-.sidebar .skills-card p strong,
-.skills-tech-list li strong {
-    color: white; 
-    font-weight: bold;
-}
-.sidebar .skills-card p {
-    margin-top: 0; 
-    font-size: 13px; 
-}
 /* ===== Compétences (Badges - Outils) ===== */
 .skills-tools {
     display: flex; 
