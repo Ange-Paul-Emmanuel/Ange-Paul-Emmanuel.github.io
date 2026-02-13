@@ -59,538 +59,198 @@ h1, h2, h3, h4 {
     color: white; 
 }
 
-/* Liens dans la sidebar (email, linkedin) */
-.sidebar a {
-    color: #a0c3e6;
-}
-.sidebar a:hover {
-    color: white;
-}
-
-/* Boutons (CV, Mes Projets, Github) - Dans la sidebar */
-a.button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    background: #0066cc; 
-    color: white;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s;
-    text-decoration: none;
-}
-
-a.button:hover {
-    background: #004080;
-}
-
-/* Style des TITRES de section (h4) */
-.sidebar h4 {
-    color: white; 
-    margin-top: 25px; 
-    margin-bottom: 0; 
-    padding-left: 5px; 
-    font-size: 1.1em; 
-}
-
-/* Style des grosses icônes rondes de contact */
-.contact-bar i {
-    color: #003366;          /* Icône bleue */
-    background-color: white; /* Fond blanc */
-    
-    /* Création de la forme ronde */
-    border-radius: 50%;
-    width: 36px;             /* On augmente la taille du cercle */
-    height: 36px;
-    
-    /* Centrage de l'icône */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Taille de l'icône FontAwesome */
-    font-size: 1.3em;        /* Icône plus imposante */
-    
-    /* Transition pour un effet fluide si besoin */
-    transition: all 0.3s ease;
-}
-
-/* Alignement de la barre */
+/* ===== Barre de contact (Icônes rondes) ===== */
 .contact-bar {
     display: flex;
     align-items: center;
-    gap: 15px;               /* Plus d'espace entre les bulles */
+    gap: 15px;
     margin-top: 15px;
 }
 
-/* LE TEXTE DU MAIL */
+.contact-bar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #a0c3e6;
+    transition: color 0.3s;
+}
+
+.contact-bar i {
+    color: #003366;          /* Icône bleue */
+    background-color: white; /* Fond blanc */
+    border-radius: 50%;
+    width: 36px;             
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    flex-shrink: 0;          /* Empêche la déformation */
+    transition: background-color 0.3s;
+}
+
 .contact-bar span {
-    margin-left: 8px;
+    margin-left: 10px;
     font-size: 0.9em;
-    white-space: nowrap;     /* Force le texte à rester sur une ligne */
-}
-
-/* Optionnel : légère réaction au survol */
-.contact-bar a:hover i {
-    background-color: #a0c3e6; /* Le fond devient bleu clair au survol */
-    color: #003366;
-}
-
-/* ************************************** */
-/* SECTIONS DANS LA SIDEBAR */
-/* ************************************** */
-.sidebar .about,
-.sidebar .skills-tech-container,
-.sidebar .skills-tools-container {
-    background-color: #0066cc;
-    color: white; 
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-    margin-top: 5px; 
-    margin-bottom: 20px; 
-}
-
-/* Assure que le texte et le gras dans ces blocs sont blancs */
-.sidebar .about p strong,
-.skills-tech-list li strong {
-    color: white; 
-    font-weight: bold;
-}
-.sidebar .about p {
-    margin-top: 0; 
-    font-size: 13px; 
-}
-
-/* ===== Compétences (Badges - Outils) ===== */
-.skills-tools {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 8px;
-    margin-top: 10px; 
-    line-height: 2.2;
-}
-
-.skill-tag {
-    display: inline-block;
-    background: white; 
-    color: #003366; 
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85em; 
-    font-weight: 600;
     white-space: nowrap;
 }
 
-/* ===== Liste Compétences Techniques (Tirets) ===== */
-.skills-box-simple {
-    background: rgba(255, 255, 255, 0.05); /* Fond subtil */
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 3px solid #a0c3e6; /* Ligne d'accentuation sur le côté */
+.contact-bar a:hover {
+    color: white;
 }
 
-.skills-box-simple ul {
-    list-style: none; /* On enlève les puces par défaut */
+.contact-bar a:hover i {
+    background-color: #a0c3e6;
+}
+
+/* ===== Sections dans la Sidebar (Cartes Bleues) ===== */
+.sidebar .about,
+.sidebar .skills-tech-container,
+.sidebar .skills-tools-container,
+.skills-card {
+    background-color: #0066cc; /* Bleu clair harmonisé */
+    color: white; 
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin-top: 10px; 
+    margin-bottom: 25px; 
+}
+
+.sidebar h4 {
+    color: white; 
+    margin-top: 25px; 
+    font-size: 1.1em; 
+}
+
+/* ===== Outils (Badges/Tags) ===== */
+.skills-tools {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    background: white; 
+    color: #003366; 
+    padding: 5px 15px 5px 5px; /* Padding asymétrique pour le cercle */
+    border-radius: 50px;
+    font-size: 0.85em; 
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.skill-tag i {
+    color: white;
+    background-color: #003366;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.skill-tag:hover {
+    background: #e6f0ff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* TRANSFORM SCALE SUPPRIMÉ POUR ÉVITER LES BUGS DE SUPERPOSITION */
+}
+
+/* ===== Compétences Techniques (Liste épurée) ===== */
+.skills-card ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.skills-box-simple li {
+.skills-card li {
     color: white;
     font-size: 0.95em;
-    margin-bottom: 12px;
-    padding-left: 15px;
+    margin-bottom: 10px;
+    padding-left: 20px;
     position: relative;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
-/* Création d'un tiret stylisé en CSS */
-.skills-box-simple li::before {
-    content: "";
+.skills-card li::before {
+    content: "—";
     position: absolute;
     left: 0;
-    top: 50%;
-    width: 6px;
-    height: 2px;
-    background-color: #a0c3e6; /* Couleur assortie à ton thème */
-    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.6);
 }
-
-.skills-box-simple li:last-child {
-    margin-bottom: 0;
-}
-
 
 /* ===== Colonne principale (Contenu) ===== */
 .main {
     margin-left: 30%;
     padding: 40px;
     box-sizing: border-box;
-    padding-top: 5px; 
 }
 
-/* Styles pour les listes de détails de projets */
-.project-item ul.project-details {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #333; 
-}
-
-/* ************************************** */
-/* EN-TÊTE FIXE (Bienvenue + Boutons) */
-/* ************************************** */
 .header-main {
-    /* Propriétés pour Figer l'élément */
     position: sticky; 
-    top: 0;         
+    top: 0;          
     z-index: 10;      
-    
-    /* Styles visuels pour l'élément fixe */
-    background-color: #f9fbff; /* Couleur de fond de la page */
+    background-color: #f9fbff; 
     padding: 15px 0 20px 0;    
     border-bottom: 1px solid #e0e0e0; 
-    margin-bottom: 30px;
-
-    /* Propriétés Flexbox pour aligner titre et boutons */
     display: flex;
-    justify-content: space-between; /* Espace entre le titre et les boutons */
-    align-items: center; /* Centrage vertical */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-main h1 {
-    margin: 0; 
-    font-size: 2.5em; 
-    color: #003366;
-}
-
-/* ************************************** */
-/* TITRE ANIMÉ */
-/* ************************************** */
-@keyframes wave {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(5px); } /* Léger déplacement */
-    100% { transform: translateX(0); }
-}
-
-.main .animated-title {
-    animation: wave 2s ease-in-out infinite; /* Application de l'animation */
-    display: inline-block; /* Nécessaire pour l'animation transform */
-}
-
-
-/* Style pour les boutons dans l'en-tête (Inline) */
-.header-buttons a.button-inline {
-    display: inline-block; /* Les met côte à côte */
-    padding: 8px 15px;
-    margin-left: 10px; /* Espace entre les boutons */
-    
-    background: #0066cc;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.header-buttons a.button-inline:hover {
-    background: #004080;
-}
-
-
-.section {
-    margin-bottom: 40px; 
-    padding: 20px;
-    padding-top: 15px; 
+/* ===== Items Projets & Expériences ===== */
+.project-item, .experience-item { 
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.main .section-title {
-    text-align: center; 
-    margin-top: 40px;    
-    margin-bottom: 10px; 
-    font-size: 1.8em;
-    color: #003366;
-    font-weight: 700;
-}
-
-/* ************************************** */
-/* SECTIONS EXPÉRIENCES ET PROJETS (Boîtes individuelles) */
-/* ************************************** */
-
-.project-item,
-.experience-item { 
-    background: #fcfcfc;
-    border: 1px solid #e0e0e0;
     border-left: 5px solid #0066cc;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 25px;
-    border-radius: 5px;
-    transition: box-shadow 0.3s, transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
 }
 
-.project-item:hover,
-.experience-item:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
-    transform: translateY(-2px);
+.project-item:hover, .experience-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* Style des éléments dans le bloc Projets */
-.project-item h3 a {
-    color: #003366;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.project-item .description {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-style: italic; 
-    color: #555;
-}
-
-.project-item .description strong {
-    font-style: normal;
-}
-
-/* Assure que la balise <strong> et <b> sont toujours en gras */
-strong, b {
-    font-weight: bold; /* Force le navigateur à appliquer le gras */
-}
-
-.project-item .technologies {
-    font-size: 0.9em;
-    color: #888;
-    margin-top: 5px;
-}
-
-/* ************************************** */
-/* STYLE DES IMAGES DE PROJET (Flottant pour optimiser l'espace) */
-/* ************************************** */
 .project-item .project-image {
-    width: 100%; 
-    max-width: 250px; 
+    width: 250px;
     height: auto;
-    
     float: right; 
     margin: 0 0 10px 15px; 
-    
-    border: 1px solid #e0e0e0;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
-/* Règle nécessaire pour forcer les éléments suivants à ne pas remonter à côté de l'image flottante. */
 .project-item::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* ************************************** */
-/* STYLE DU BOUTON VOIR PLUS (par projet) */
-/* ************************************** */
-.project-item .button-project {
-    /* CHANGÉ: de 'inline-block' à 'block' sur desktop pour que clear:both fonctionne toujours bien */
-    display: block; 
-    background-color: #e6f0ff; 
-    color: #003366; 
-    border: 1px solid #cce0ff;
-    padding: 6px 12px;
-    margin-top: 10px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    
-    clear: both; /* Force le bouton à apparaître SOUS l'image flottante */
-    width: fit-content; /* Le bouton ne prend que la largeur de son contenu */
-}
-
-.project-item .button-project:hover {
-    background-color: #0066cc; 
-    color: white;
-    text-decoration: none;
-}
-
-/* ************************************** */
-/* STICKER DE VÉRIFICATION (Certifications) */
-/* ************************************** */
-a.verification-sticker {
-    display: inline-block;
-    background-color: #d4edda;
-    color: #155724; 
-    border: 1px solid #c3e6cb;
-    padding: 2px 8px;
-    margin-left: 10px;
-    border-radius: 4px;
-    font-size: 0.85em; 
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
-
-a.verification-sticker:hover {
-    background-color: #c3e6cb;
-    text-decoration: none;
-}
-/* ************************************** */
-/* Style des icônes dans les tags */
-/* ************************************** */
-
-/* Style des icônes dans les tags */
-.skill-tag i {
-    margin-right: 8px; /* Espace entre le logo et le texte */
-    font-size: 1.1em;  /* Rend l'icône un poil plus grande */
-    vertical-align: middle;
-}
-
-/* On garde ton style de tag élégant */
-.skill-tag {
-    display: inline-flex; /* Permet un alignement parfait icône/texte */
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1); 
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.85em;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-bottom: 5px;
-}
-
-.skill-tag:hover {
-    background: white;
-    color: #003366;
-    transform: scale(1.05); /* Petit effet de zoom au survol */
-}
-
-/* NOUVEAU STYLE POUR LES ICÔNES */
-.skill-tag i {
-    /* Couleurs demandées */
-    color: #003366;          /* L'icône elle-même est bleue */
-    background-color: white; /* Le fond derrière l'icône est blanc */
-
-    /* Création du cercle blanc */
-    border-radius: 50%;      /* Rend le fond parfaitement rond */
-    width: 32px;             /* Largeur fixe du cercle */
-    height: 32px;            /* Hauteur fixe du cercle */
-    
-    /* Centrage parfait de l'icône dans le cercle */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    /* Taille et espacement */
-    font-size: 1.2em;        /* Taille de l'icône à l'intérieur du cercle */
-    margin-right: 10px;      /* Espace entre le cercle blanc et le texte du badge */
-    vertical-align: middle;  /* Aligne le cercle avec le texte */
-}
-
-/* Ajustement du badge pour accueillir l'icône plus grande */
-.skill-tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 15px;      /* Un peu plus d'espace interne */
-    font-weight: 600;       /* Texte un peu plus épais pour équilibrer */
-}
-
-/* ************************************** */
-/* RESPONSIVE (Mobile) */
-/* ************************************** */
+/* ===== Responsive (Mobile) ===== */
 @media (max-width: 900px) {
     .sidebar, .main {
         width: 100%;
         position: static;
         margin-left: 0;
-        padding: 20px;
     }
-    
-    /* Header principal (mobile) - Titre et boutons empilés */
-    .header-main {
-        flex-direction: column; /* Empile le titre et les boutons */
-        align-items: center; /* Centrage des éléments */
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        position: sticky; /* Reste sticky sur mobile */
-    }
-
-    .header-main h1 {
-        margin-bottom: 10px;
-    }
-    
-
-    .header-buttons {
-        width: 100%; 
-        display: flex; /* Maintient les deux boutons alignés */
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    /* Boutons en ligne du header, ajustés pour mobile */
-    .header-buttons a.button-inline {
-        margin: 0 5px; 
-        flex-grow: 1; 
-        max-width: 150px;
-        text-align: center;
-    }
-    
-    /* Image sur mobile: plus de flottaison, image centrée et à 100% de largeur */
-    .project-item .project-image {
-        float: none; 
-        margin: 10px auto 15px auto; 
-        max-width: 100%;
-    }
-    
-    /* Bouton projet sur mobile: plus besoin de nettoyer le flottement */
-    .project-item .button-project {
-        clear: none; 
-        width: 100%; 
-        text-align: center;
-    }
-
-    /* Ajustements de style pour le mode mobile */
     .sidebar {
-        background: #f0f0f0; 
-        color: #1a1a1a;
-        border-bottom: 5px solid #0066cc;
         height: auto;
     }
-    
-    .sidebar .about,
-    .sidebar .skills-tech-container,
-    .sidebar .skills-tools-container {
-        background-color: white; 
-        color: #1a1a1a;
-        border: 1px solid #e0e0e0; 
-        box-shadow: none;
-    }
-
-    .sidebar h4 {
-        color: #003366; 
-    }
-    .sidebar .about p strong,
-    .skills-tech-list li strong {
-        color: #1a1a1a; 
-    }
-    .skills-tech-list li::before {
-        color: #1a1a1a; 
-    }
-    .sidebar h2, .sidebar h3 {
-        color: #003366; 
-    }
-
-    .skill-tag {
-        background: #e6f0ff; 
-        color: #003366; 
-        border: 1px solid #cce0ff;
+    .project-item .project-image {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 100%;
     }
 }
