@@ -455,12 +455,13 @@
                 
                 <ul class="project-details">
                     <li>
-                        <strong>Méthodes :</strong> Simulation et ingestion de données patients en flux (Kafka). Pipeline distribué orchestré avec <strong>Docker</strong>. 
-                        Feature engineering sur séries temporelles (moyennes mobiles, indicateurs d'alerte). 
-                        Entraînement d'un modèle <strong>Random Forest</strong> pour la classification du risque. Inférence temps-réel via un agent poussant les événements dans <strong>Elasticsearch</strong>.
+                        <strong>Méthodes :</strong> Ingestion de flux continus via <strong>Apache Kafka</strong> pour simuler une surveillance hospitalière. 
+                        Conteneurisation de l'architecture (Broker, Zookeeper, Producers) sous <strong>Docker</strong>. 
+                        Feature engineering sur séries temporelles (fenêtrage glissant) et inférence via un modèle <strong>Random Forest</strong> optimisé. 
+                        Indexation haute performance dans <strong>Elasticsearch</strong> couplée à un <strong>Agent IA (LLM)</strong> pour la génération automatique de synthèses médicales textuelles basées sur l'état instantané du patient.
                     </li>
                     <li>
-                        <strong>Résultats Clés & Impact :</strong> Pipeline complet fonctionnel (Simulateur → Kafka → Agent IA → ELK). 
+                        <strong>Résultats Clés & Impact :</strong> Pipeline complet fonctionnel (Simulateur → Kafka → ML & Agent IA → ELK). 
                         Visualisation dynamique des alertes sous <strong>Kibana</strong> permettant de prioriser les patients à haut risque. 
                         Solution opérationnelle démontrant une maîtrise des architectures data-streaming et du MLOps pour le secteur de la santé.
                     </li>
